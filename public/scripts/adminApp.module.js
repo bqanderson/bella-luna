@@ -1,1 +1,1 @@
-angular.module('adminApp',['ngRoute', 'angular-momentjs', 'mwl.calendar', 'ui.bootstrap', 'ngAnimate']);
+angular.module('adminApp',['ngRoute', 'mwl.calendar', 'ui.bootstrap', 'ngAnimate', 'angularMoment']);

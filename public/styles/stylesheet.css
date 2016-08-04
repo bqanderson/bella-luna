@@ -1,0 +1,51 @@
+.oldStandard {
+  font-family: 'Old Standard TT', serif;
+}
+
+.robotoReg {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.robotoLite {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.robotoBold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+a.center {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.underline {
+  border-bottom: 1px solid 
+}
+
+/*.slide-excerpt {
+    width: 50%;
+}
+
+.slide-excerpt {
+    bottom: 0;
+}
+
+.slide-excerpt {
+    right: 0;
+}
+
+.flexslider {
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+.slide-image {
+    max-height: 800px;
+}*/

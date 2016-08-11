@@ -16,6 +16,7 @@ var login = require('./routes/login');
 var createAdminEvent = require('./routes/createAdminEvent');
 var showEvents = require('./routes/showEvents');
 var deleteEvents = require('./routes/deleteAdminEvent');
+var editEvent = require('./routes/editAdminEvent.js')
 var addGuest = require('./routes/addGuest');
 var showGuest = require('./routes/showGuest');
 var deleteGuest = require('./routes/deleteGuest');
@@ -67,6 +68,7 @@ app.use('/login', login);
 app.use('/createAdminEvent', createAdminEvent);
 app.use('/showEvents', showEvents);
 app.use('/deleteAdminEvent', deleteEvents);
+app.use('/editEvent', editEvent);
 app.use('/addGuest', addGuest);
 app.use('/showGuest', showGuest);
 app.use('/deleteGuest', deleteGuest);

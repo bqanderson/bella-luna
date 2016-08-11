@@ -1,6 +1,15 @@
-angular.module('adminApp').controller('EventsModalController', function($http, moment, alert, calendarConfig, DataService){
+angular.module('adminApp').controller('EditedEventsModalController', function($http, moment, alert, calendarConfig, DataService, sendData){
   var vm = this;
-  vm.data = DataService.data;
+
+  vm.id = sendData._id;
+  vm.title = sendData.title;
+  vm.startsAt = sendData.startsAt;
+  vm.endsAt = sendData.endsAt;
+  vm.description = sendData.description;
+  vm.tixLink = sendData.tixLink;
+  vm.pubToBella = sendData.pubToBella;
+  vm.pubToFacebook = sendData.pubToFacebook;
+  vm.pubToAnnette = sendData.pubToAnnette;
 
   // Popup Calendar code:
   vm.today = function() {
@@ -99,36 +108,23 @@ angular.module('adminApp').controller('EventsModalController', function($http, m
     return '';
   }
 
-  //Add New Event code:
-  vm.createAdminEvent = function(){
+  //Update Event code:
+  vm.updateAdminEvent = function(){
 
     var sendData = {};
 
+    sendData.id = vm.id;
     sendData.title = vm.title;
-    sendData.color = 'red';
     sendData.startsAt = vm.startsAt;
     sendData.endsAt = vm.endsAt;
-    sendData.draggable = true;
-    sendData.resizable = true;
     sendData.description = vm.description;
     sendData.tixLink = vm.tixLink;
     sendData.pubToBella = vm.pubToBella;
     sendData.pubToFacebook = vm.pubToFacebook;
     sendData.pubToAnnette = vm.pubToAnnette;
 
-    DataService.createAdminEvent(sendData)
+    DataService.updateAdminEvent(sendData)
 
-    // $http.post('/createAdminEvent', sendData).then(function(){
-    //   console.log('Event created', sendData);
-    //   DataService.showEvents();
-    // }, function() {
-    //   console.log('Fail!');
-    // })
-    vm.title = null;
-    vm.startsAt = null;
-    vm.endsAt = null;
-    vm.description = null;
   }
-
 
 })

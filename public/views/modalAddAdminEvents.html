@@ -1,18 +1,18 @@
 <div class="container-fluid">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">{{emc.title}}</h3>
+      <h3 class="panel-title">{{aemc.title}}</h3>
     </div>
     <div class="panel-body">
       <form>
       <div class="col-md-12 form-group">
-        <input type="text" class="form-control" ng-model="emc.title" placeholder="Event Title">
+        <input type="text" class="form-control" ng-model="aemc.title" placeholder="Event Title">
       </div>
       <div class="col-md-12 form-group">
         <textarea
           class="form-control"
           rows="5"
-          ng-model="emc.description"
+          ng-model="aemc.description"
           placeholder="Event Description">
         </textarea>
       </div>
@@ -21,18 +21,18 @@
           <p class="input-group">
             <input type="text"
               class="form-control"
-              uib-datepicker-popup="{{emc.dataformat}}"
-              ng-model="emc.startsAt"
-              is-open="emc.popup1.opened"
-              datepicker-options="emc.dateOptions"
+              uib-datepicker-popup="{{aemc.dataformat}}"
+              ng-model="aemc.startsAt"
+              is-open="aemc.popup1.opened"
+              datepicker-options="aemc.dateOptions"
               ng-required="true"
               close-text="Close"
-              alt-input-formats="emc.altInputFormats"
+              alt-input-formats="aemc.altInputFormats"
               placeholder="Start Date" />
             <span class="input-group-btn">
               <button type="button"
                 class="btn btn-default"
-                ng-click="emc.open1()">
+                ng-click="aemc.open1()">
                 <i class="glyphicon glyphicon-calendar"></i>
               </button>
             </span>
@@ -42,18 +42,18 @@
           <p class="input-group">
             <input type="text"
               class="form-control"
-              uib-datepicker-popup="{{emc.format}}"
-              ng-model="emc.endsAt"
-              is-open="emc.popup2.opened"
-              datepicker-options="emc.dateOptions"
+              uib-datepicker-popup="{{aemc.format}}"
+              ng-model="aemc.endsAt"
+              is-open="aemc.popup2.opened"
+              datepicker-options="aemc.dateOptions"
               ng-required="true"
               close-text="Close"
-              alt-input-formats="emc.altInputFormats"
+              alt-input-formats="aemc.altInputFormats"
               placeholder="End Date" />
             <span class="input-group-btn">
               <button type="button"
                 class="btn btn-default"
-                ng-click="emc.open2()">
+                ng-click="aemc.open2()">
                 <i class="glyphicon glyphicon-calendar"></i>
               </button>
             </span>
@@ -61,7 +61,7 @@
         </div>
         <div
           uib-timepicker
-          ng-model="emc.startsAt"
+          ng-model="aemc.startsAt"
           hour-step="1"
           minute-step="15"
           show-meridian="true"
@@ -69,32 +69,32 @@
         </div>
         <div
           uib-timepicker
-          ng-model="emc.endsAt"
+          ng-model="aemc.endsAt"
           hour-step="1"
           minute-step="15"
           show-meridian="true"
           class="col-md-6">
         </div>
         <div class="col-md-12 form-group">
-          <input type="text" class="form-control" ng-model="emc.tixLink" placeholder="Tickets Sales Link">
+          <input type="text" class="form-control" ng-model="aemc.tixLink" placeholder="Tickets Sales Link">
         </div>
         <div class="col-md-12 checkbox">
           <h3 class="panel-title">Publish Event To:</h3><br />
         <label class="checkbox-inline">
-          <input type="checkbox" ng-model="emc.pubToBella" /> Bella Luna Studios
+          <input type="checkbox" ng-model="aemc.pubToBella" /> Bella Luna Studios
         </label>
         <label class="checkbox-inline">
-          <input type="checkbox" ng-model="emc.pubToFacebook" /> Facebook
+          <input type="checkbox" ng-model="aemc.pubToFacebook" /> Facebook
         </label>
         <label class="checkbox-inline">
-          <input type="checkbox" ng-model="emc.pubToAnnette" /> www.annetteschiebout.com
+          <input type="checkbox" ng-model="aemc.pubToAnnette" /> www.annetteschiebout.com
         </label>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-6">
 
         </div>
-        <div class="col-sm-3">
-          <button class="btn btn-primary" ng-click="$close(emc.createAdminEvent())">Save Event</button>
+        <div class="col-sm-6">
+          <button class="btn btn-primary" ng-click="$close(aemc.createAdminEvent())">Add New Event</button>
           <button class="btn btn-success pull-right">Publish Event</button>
         </div>
       </div>

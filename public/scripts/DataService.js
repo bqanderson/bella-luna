@@ -13,16 +13,10 @@ angular.module('adminApp').factory('DataService', function($http){
     console.log('EVERYTHING\'S ON FIRE', response);
   }
 
-  return {
-    data: data,
-    showEvents: showEvents,
-    createAdminEvent: createAdminEvent
-  }
-
   //List all events
   function showEvents(){
     $http.get('/showEvents').then(function(res) {
-      console.log(res.data);
+      // console.log(res.data);
       data.events = res.data;
     }, function(res){
       console.log('Fail', res);
@@ -39,5 +33,21 @@ angular.module('adminApp').factory('DataService', function($http){
     })
   }
 
+  // Update Event
+  function updateAdminEvent(eventData){
+    $http.put('/editEvent/' + eventData.id, eventData).then(function(res){
+      console.log(res);
+      console.log('Edit Event', eventData.id);
+      ;;showEvents();
+    }, function(res){
+      console.log('Failure is not accepted!', res);
+    })
+  }
+  return {
+    data: data,
+    showEvents: showEvents,
+    createAdminEvent: createAdminEvent,
+    updateAdminEvent: updateAdminEvent
+  }
 
 })

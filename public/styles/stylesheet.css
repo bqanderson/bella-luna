@@ -52,11 +52,11 @@
   border-bottom: 1px solid #bbb
 }
 
-.wrap {
+/*.wrap {
   padding: 15px 0;
-}
+}*/
 
-.site-title {
+/*.site-title {
   color: #555;
   font-family: 'Old Standard TT', serif;
   font-size: 58px;
@@ -65,20 +65,20 @@
   letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
-}
+}*/
 
 .site-description {
-  color: #bbb;
+  /*color: #bbb;*/
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  /*font-weight: 400;
   font-size: 12px;
   line-height: 0.5px;
   margin: 0 10px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase;*/
 }
 
-.menu-item {
+/*.menu-item {
   color: #999;
   font-family: 'Old Standart TT', serif;;
   font-size: 14px;
@@ -88,4 +88,4 @@
   text-align: left;
   text-decoration: none;
   padding: 18px 0 18px 15px;
-}
+}*/

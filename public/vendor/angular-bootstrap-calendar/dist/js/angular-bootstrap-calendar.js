@@ -249,6 +249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      vm.events = vm.events.filter(eventIsValid).map(function(event, index) {
+					console.log(eventIsValid);
 	        Object.defineProperty(event, '$id', {enumerable: false, configurable: true, value: index});
 	        return event;
 	      });

@@ -1,14 +1,11 @@
-angular.module('adminApp').factory('alert', function($uibModal) {
+angular.module('adminApp').factory('alert', function($uibModal, $http) {
 
-    function show(action, event) {
+    function show(_, modalData) {
       return $uibModal.open({
-        templateUrl: 'modalContent.html',
-        controller: function() {
-          var vm = this;
-          vm.action = action;
-          vm.event = event;
-        },
-        controllerAs: 'vm'
+        templateUrl: '../views/modalAdminEvents.html',
+        controller: 'EventsModalController',
+        controllerAs: 'emc',
+        resolve: modalData
       });
     }
 

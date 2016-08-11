@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{emc.title}}</h3>
+    </div>
+    <div class="panel-body">
+      <form>
+      <div class="col-md-12 form-group">
+        <input type="text" class="form-control" ng-model="emc.title" placeholder="Event Title">
+      </div>
+      <div class="col-md-12 form-group">
+        <textarea
+          class="form-control"
+          rows="5"
+          ng-model="emc.description"
+          placeholder="Event Description">
+        </textarea>
+      </div>
+      <div class="form-group">
+        <div class="col-md-6">
+          <p class="input-group">
+            <input type="text"
+              class="form-control"
+              uib-datepicker-popup="{{emc.dataformat}}"
+              ng-model="emc.startsAt"
+              is-open="emc.popup1.opened"
+              datepicker-options="emc.dateOptions"
+              ng-required="true"
+              close-text="Close"
+              alt-input-formats="emc.altInputFormats"
+              placeholder="Start Date" />
+            <span class="input-group-btn">
+              <button type="button"
+                class="btn btn-default"
+                ng-click="emc.open1()">
+                <i class="glyphicon glyphicon-calendar"></i>
+              </button>
+            </span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="input-group">
+            <input type="text"
+              class="form-control"
+              uib-datepicker-popup="{{emc.format}}"
+              ng-model="emc.endsAt"
+              is-open="emc.popup2.opened"
+              datepicker-options="emc.dateOptions"
+              ng-required="true"
+              close-text="Close"
+              alt-input-formats="emc.altInputFormats"
+              placeholder="End Date" />
+            <span class="input-group-btn">
+              <button type="button"
+                class="btn btn-default"
+                ng-click="emc.open2()">
+                <i class="glyphicon glyphicon-calendar"></i>
+              </button>
+            </span>
+          </p>
+        </div>
+        <div
+          uib-timepicker
+          ng-model="emc.startsAt"
+          hour-step="1"
+          minute-step="15"
+          show-meridian="true"
+          class="col-md-6">
+        </div>
+        <div
+          uib-timepicker
+          ng-model="emc.endsAt"
+          hour-step="1"
+          minute-step="15"
+          show-meridian="true"
+          class="col-md-6">
+        </div>
+        <div class="col-md-12 form-group">
+          <input type="text" class="form-control" ng-model="emc.tixLink" placeholder="Tickets Sales Link">
+        </div>
+        <div class="col-md-12 checkbox">
+          <h3 class="panel-title">Publish Event To:</h3><br />
+        <label class="checkbox-inline">
+          <input type="checkbox" ng-model="emc.pubToBella" /> Bella Luna Studios
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" ng-model="emc.pubToFacebook" /> Facebook
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" ng-model="emc.pubToAnnette" /> www.annetteschiebout.com
+        </label>
+        </div>
+        <div class="col-sm-9">
+
+        </div>
+        <div class="col-sm-3">
+          <button class="btn btn-primary" ng-click="$close(emc.createAdminEvent())">Save Event</button>
+          <button class="btn btn-success pull-right">Publish Event</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

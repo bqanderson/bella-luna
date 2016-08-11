@@ -7,6 +7,23 @@ angular.module('adminApp').config(function($routeProvider, $locationProvider){
     templateUrl: 'views/index.html',
     // controller: 'LoginController'
   })
+  .when('/about', {
+    templateUrl: 'views/about.html'
+  })
+  .when('/events', {
+    templateUrl: 'views/events.html',
+    // controller: 'PublicEventsController',
+    // controllerAs: 'pec'
+  })
+  .when('/artists', {
+    templateUrl: 'views/artists.html'
+  })
+  .when('/press', {
+    templateUrl: 'views/press.html'
+  })
+  .when('/gallery', {
+    templateUrl: 'views/gallery.html'
+  })
   .when('/admin', {
     templateUrl: 'views/login.html',
     controller: 'LoginController',
@@ -17,10 +34,10 @@ angular.module('adminApp').config(function($routeProvider, $locationProvider){
     controller: 'AdminEventsController',
     controllerAs: 'aec'
   })
-  .when('/admin/emailList', {
-    templateUrl: 'views/emailList.html',
-    controller: 'EmailListController',
-    controllerAs: 'elc'
+  .when('/admin/guestList', {
+    templateUrl: 'views/guestList.html',
+    controller: 'GuestListController',
+    controllerAs: 'glc'
   })
   .when('/admin/adminGallery', {
     templateUrl: 'views/adminGallery.html',
@@ -30,12 +47,4 @@ angular.module('adminApp').config(function($routeProvider, $locationProvider){
 
   $locationProvider.html5Mode(true);
 
-
-
 })
-
-
-// var angular = require('angular');
-// var moment = require('moment');
-//
-// angular.module('adminApp').constant('moment', moment);

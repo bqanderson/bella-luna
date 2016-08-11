@@ -5,6 +5,7 @@ var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local').Strategy
 // var moment = require('moment'); //not sure if I need this here or not
+// var angularMoment = require('angular-moment');
 
 var User = require('./models/user');
 
@@ -12,6 +13,13 @@ var index = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var register = require('./routes/register');
 var login = require('./routes/login');
+var createAdminEvent = require('./routes/createAdminEvent');
+var showEvents = require('./routes/showEvents');
+var deleteEvents = require('./routes/deleteAdminEvent');
+var addGuest = require('./routes/addGuest');
+var showGuest = require('./routes/showGuest');
+var deleteGuest = require('./routes/deleteGuest');
+var editGuest = require('./routes/editGuest');
 
 var app = express();
 
@@ -56,10 +64,17 @@ app.use('/', index);
 app.use('/admin', adminRouter);
 app.use('/register', register);
 app.use('/login', login);
+app.use('/createAdminEvent', createAdminEvent);
+app.use('/showEvents', showEvents);
+app.use('/deleteAdminEvent', deleteEvents);
+app.use('/addGuest', addGuest);
+app.use('/showGuest', showGuest);
+app.use('/deleteGuest', deleteGuest);
+app.use('/editGuest', editGuest);
 
-app.get('/', function(req, res, next){
-  res.sendFile(path.resolve(__dirname, 'public/views/index.html'));
-})
+// app.get('/*', function(req, res, next){
+//   res.sendFile(path.resolve(__dirname, 'public/views/admin.html'));
+// });
 
 mongoose.connect('mongodb://localhost:27017/bella-luna');
 

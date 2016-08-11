@@ -21,7 +21,8 @@ module.exports = function(grunt) {
             'angular-ui-bootstrap/**',
             'angular-animate/**',
             'angular-momentjs/**',
-            'moment/**'],
+            'moment/**',
+            'requirejs/**'],
 
             dest: 'public/vendor'
           },

@@ -52,20 +52,17 @@
   border-bottom: 1px solid #bbb
 }
 
-/*.wrap {
-  padding: 15px 0;
-}*/
+input, select, textarea {
+  text-transform: none;
+}
 
-/*.site-title {
-  color: #555;
-  font-family: 'Old Standard TT', serif;
-  font-size: 58px;
-  font-weight: 400;
-  line-height: 0.8;
-  letter-spacing: 1px;
-  text-align: center;
+tbody, tr, td {
+  border: 0px;
+}
+
+a:hover {
   text-decoration: none;
-}*/
+}
 
 .site-description {
   /*color: #bbb;*/
@@ -77,15 +74,3 @@
   text-align: center;
   text-transform: uppercase;*/
 }
-
-/*.menu-item {
-  color: #999;
-  font-family: 'Old Standart TT', serif;;
-  font-size: 14px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-align: left;
-  text-decoration: none;
-  padding: 18px 0 18px 15px;
-}*/

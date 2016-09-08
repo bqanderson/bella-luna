@@ -1,7 +1,7 @@
 angular.module('adminApp').controller('LoginController', function($http, $location, DataService){
   var vm = this;
-  vm.username = 'user1';
-  vm.password = '1234';
+  vm.username = null;
+  vm.password = null;
 
   vm.register = function(){
 

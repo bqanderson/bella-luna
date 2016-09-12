@@ -1,11 +1,10 @@
-// 'use strict';
+'use strict';
 
 angular.module('adminApp').config(function($routeProvider, $locationProvider){
   $routeProvider
 
   .when('/', {
-    templateUrl: 'views/index.html',
-    // controller: 'LoginController'
+    templateUrl: 'views/slider.html',
   })
   .when('/about', {
     templateUrl: 'views/about.html'
@@ -22,7 +21,19 @@ angular.module('adminApp').config(function($routeProvider, $locationProvider){
     templateUrl: 'views/press.html'
   })
   .when('/gallery', {
-    templateUrl: 'views/gallery.html'
+    templateUrl: 'views/gallery.html',
+    controller: 'PublicGalleryController',
+    controllerAs: 'pgc'
+  })
+  .when('/guestbook', {
+    templateUrl: 'views/guestbook.html'
+    // controller: 'GuestbookController',
+    // controllerAs: 'gbc'
+  })
+  .when('/contact', {
+    templateUrl: 'views/contact.html'
+    // controller: 'PublicContactController',
+    // controllerAs: 'pcc'
   })
   .when('/admin', {
     templateUrl: 'views/login.html',

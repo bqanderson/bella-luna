@@ -35,17 +35,17 @@ angular.module('adminApp').controller('AdminEventsController', function($http, m
     alert.showAdd(sendData);
   };
 
-    // Delete Admin Event
-    vm.deleteEvent = function(adminEventId) {
-      console.log("Delete Event", adminEventId);
-      $http.delete('/deleteAdminEvent/' + adminEventId).then(function(res){
-        console.log(res);
-        vm.data.events = res.data;
-        DataService.showEvents();
-      }, function(res){
-        console.log('Fail', res);
-      })
-    }
+  // Delete Admin Event
+  vm.deleteEvent = function(adminEventId) {
+    console.log("Delete Event", adminEventId);
+    $http.delete('/deleteAdminEvent/' + adminEventId).then(function(res){
+      console.log(res);
+      vm.data.events = res.data;
+      DataService.showEvents();
+    }, function(res){
+      console.log('Fail', res);
+    })
+  }
 
     // vm.eventClicked = function(sendData) {
     //   console.log('Clicke Event', sendData);

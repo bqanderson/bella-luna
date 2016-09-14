@@ -148,6 +148,27 @@ NAV
     max-height: 800px;
 }
 
+span[data-cal-date] {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+th {
+  text-transform: none;
+}
+
+.table-info {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .oldStandard {
   font-family: 'Old Standard TT', serif;
 }

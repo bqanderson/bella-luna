@@ -80,17 +80,17 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Date and Time</th>
-            <th>Event Name</th>
-            <th>Remove</th>
+            <th class="col-sm-4">Date and Time</th>
+            <th class="col-sm-6">Event Name</th>
+            <th class="col-sm-2">Remove</th>
           </tr>
         </thead>
         <tbody ng-repeat="event in aec.data.events track by $index">
           <tr>
-            <td ng-click="aec.editEventClicked(event)"><p>{{event.startsAt | date: 'short'}}</p></td>
-            <td ng-click="aec.editEventClicked(event)"><p>{{event.title}}</p></td>
-            <td>
-              <button type="button" class="btn btn-danger btn-xs" ng-click="aec.deleteEvent(event._id)">Remove</button>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.title}}</p></td>
+            <td class="center">
+              <span class="glyphicon glyphicon-remove text-danger" ng-click="aec.deleteEvent(event._id)"></span>
             </td>
           </tr>
         </tbody>

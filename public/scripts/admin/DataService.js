@@ -1,4 +1,4 @@
-//This is a Factory type AngularJS Service
+// This is a Factory type AngularJS Service
 
 angular.module('adminApp').factory('DataService', function($http){
 

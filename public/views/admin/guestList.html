@@ -28,13 +28,13 @@
         <tbody ng-repeat="guest in glc.guests track by $index" ng-class-odd="'trOdd'" ng-class-even="'trEven'">
           <tr>
             <td ng-click="glc.showEditor($index)">
-              <p>{{guest.firstName}}</p>
+              <p class="table-info">{{guest.firstName}}</p>
             </td>
             <td ng-click="glc.showEditor($index)">
-              <p>{{guest.lastName}}</p>
+              <p class="table-info">{{guest.lastName}}</p>
             </td>
             <td ng-click="glc.showEditor($index)">
-              <p>{{guest.email}}</p>
+              <p class="table-info">{{guest.email}}</p>
             </td>
             <td class="center">
                 <input type="checkbox" />
@@ -51,8 +51,10 @@
               <input type="email" class="form-control input-sm" placeholder="Update Email" ng-model="glc.updateEmail" />
             </td>
             <td class="col-sm-1 center">
-              <button class="btn btn-primary btn-xs" ng-click="glc.updateGuests($index)">Update</button>
-              <button type="button" class="btn btn-danger btn-xs" ng-click="glc.deleteGuest(guest._id)">Delete</button>
+              <span class="glyphicon glyphicon-ok text-success" ng-click="glc.updateGuests($index)"></span>
+              <span class="glyphicon glyphicon-remove text-danger" ng-click="glc.deleteGuest($index)"></span>
+              <!-- <button class="btn btn-primary btn-xs" ng-click="glc.updateGuests($index)">Update</button> -->
+              <!-- <button type="button" class="btn btn-danger btn-xs" ng-click="glc.deleteGuest(guest._id)">Delete</button> -->
             </td>
           </tr>
         </tbody>

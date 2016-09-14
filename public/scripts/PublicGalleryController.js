@@ -1,4 +1,4 @@
-angular.module('adminApp').controller('PublicGalleryController', function($scope, DataService){
+angular.module('publicApp').controller('PublicGalleryController', function($scope){
   // var vm = this;
 
   $scope.slides = [

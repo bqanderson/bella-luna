@@ -43,6 +43,7 @@ angular.module('adminApp').factory('DataService', function($http){
       console.log('Failure is not accepted!', res);
     })
   }
+
   return {
     data: data,
     showEvents: showEvents,

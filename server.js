@@ -7,6 +7,8 @@ var localStrategy = require('passport-local').Strategy
 // var moment = require('moment'); //not sure if I need this here or not
 // var angularMoment = require('angular-moment');
 
+require('dotenv').config();
+
 var User = require('./models/user');
 
 var index = require('./routes/index');
@@ -16,11 +18,12 @@ var login = require('./routes/login');
 var createAdminEvent = require('./routes/createAdminEvent');
 var showEvents = require('./routes/showEvents');
 var deleteEvents = require('./routes/deleteAdminEvent');
-var editEvent = require('./routes/editAdminEvent.js')
+var editEvent = require('./routes/editAdminEvent')
 var addGuest = require('./routes/addGuest');
 var showGuest = require('./routes/showGuest');
 var deleteGuest = require('./routes/deleteGuest');
 var editGuest = require('./routes/editGuest');
+var sendEmail = require('./routes/sendEmail');
 
 var app = express();
 
@@ -73,6 +76,7 @@ app.use('/addGuest', addGuest);
 app.use('/showGuest', showGuest);
 app.use('/deleteGuest', deleteGuest);
 app.use('/editGuest', editGuest);
+app.use('/sendEmail', sendEmail);
 
 // app.get('/*', function(req, res, next){
 //   res.sendFile(path.resolve(__dirname, 'public/views/admin.html'));

@@ -100,4 +100,5 @@ passport.deserializeUser(function(id, done) {
 var server = app.listen(3100, function(){
   var port = server.address().port;
   console.log("Listening on port", port);
+  console.log('MongoDB Connected');
 })

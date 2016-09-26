@@ -255,3 +255,7 @@ ul.navList {
   text-align: center;
   text-transform: uppercase;
 }
+
+.modal-view {
+  margin-top: 15px;
+}

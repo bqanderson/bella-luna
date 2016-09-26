@@ -7,6 +7,7 @@ angular.module('adminApp').controller('EditedEventsModalController', function($h
   vm.endsAt = sendData.endsAt;
   vm.description = sendData.description;
   vm.tixLink = sendData.tixLink;
+  vm.color = sendData.color;
   vm.pubToBella = sendData.pubToBella;
   vm.pubToFacebook = sendData.pubToFacebook;
   vm.pubToAnnette = sendData.pubToAnnette;
@@ -119,11 +120,13 @@ angular.module('adminApp').controller('EditedEventsModalController', function($h
     sendData.endsAt = vm.endsAt;
     sendData.description = vm.description;
     sendData.tixLink = vm.tixLink;
+    sendData.color = vm.color;
     sendData.pubToBella = vm.pubToBella;
     sendData.pubToFacebook = vm.pubToFacebook;
     sendData.pubToAnnette = vm.pubToAnnette;
 
     DataService.updateAdminEvent(sendData)
+    console.log('Edited Data:', sendData);
 
   }
 

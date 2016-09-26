@@ -54,8 +54,8 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
   };
 
   vm.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-  vm.format = vm.formats[0];
-  vm.altInputFormats = ['M!/d!/yyyy'];
+  // vm.format = vm.formats[0];
+  // vm.altInputFormats = ['M!/d!/yyyy'];
 
   vm.popup1 = {
     opened: false
@@ -69,16 +69,6 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
   tomorrow.setDate(tomorrow.getDate() + 1);
   var afterTomorrow = new Date();
   afterTomorrow.setDate(tomorrow.getDate() + 1);
-  vm.events = [
-    {
-      date: tomorrow,
-      status: 'full'
-    },
-    {
-      date: afterTomorrow,
-      status: 'partially'
-    }
-  ];
 
   function getDayClass(data) {
     var date = data.date,
@@ -98,7 +88,6 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
     return '';
   }
 
-  //Update Event code:
   vm.createAdminEvent = function(){
 
     var sendData = {};
@@ -109,11 +98,13 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
     sendData.endsAt = vm.endsAt;
     sendData.description = vm.description;
     sendData.tixLink = vm.tixLink;
+    sendData.color = vm.color;
     sendData.pubToBella = vm.pubToBella;
     sendData.pubToFacebook = vm.pubToFacebook;
     sendData.pubToAnnette = vm.pubToAnnette;
 
     DataService.createAdminEvent(sendData)
+    console.log('Data:', sendData);
 
   }
 

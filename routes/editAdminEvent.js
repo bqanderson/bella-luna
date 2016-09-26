@@ -12,6 +12,7 @@ router.put('/:id', function(req, res){
       res.sendStatus(500);
     } else {
       var title = data.title;
+      var color = data.color;
       var startsAt = data.startsAt;
       var endsAt = data.endsAt;
       var description = data.description;
@@ -21,6 +22,9 @@ router.put('/:id', function(req, res){
       var pubToAnnette = data.pubToAnnette;
       if(title){
         events.title = title;
+      }
+      if(color){
+        events.color = color;
       }
       if(startsAt){
         events.startsAt = startsAt;

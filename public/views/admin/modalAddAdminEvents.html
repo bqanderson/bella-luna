@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid modal-view">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">{{aemc.title}}</h3>
@@ -78,7 +78,8 @@
         <div class="col-md-12 form-group">
           <input type="text" class="form-control" ng-model="aemc.tixLink" placeholder="Tickets Sales Link">
         </div>
-        <div class="col-md-12 checkbox">
+
+        <!-- <div class="col-md-12 checkbox">
           <h3 class="panel-title">Publish Event To:</h3><br />
         <label class="checkbox-inline">
           <input type="checkbox" ng-model="aemc.pubToBella" /> Bella Luna Studios
@@ -89,13 +90,18 @@
         <label class="checkbox-inline">
           <input type="checkbox" ng-model="aemc.pubToAnnette" /> www.annetteschiebout.com
         </label>
-        </div>
-        <div class="col-sm-6">
+        </div> -->
 
+        <div class="col-md-12">
+          <h3 class="panel-title">Select Event Type</h3>
+          <select class="form-control" ng-model="aemc.color">
+            <option value="public">Public Event</option>
+            <option value="private">Private Event</option>
+            <option value="artInRes">Artist in Residence</option>
+          </select>
         </div>
-        <div class="col-sm-6">
+        <div class="center">
           <button class="btn btn-primary" ng-click="$close(aemc.createAdminEvent())">Add New Event</button>
-          <!-- <button class="btn btn-success pull-right">Publish Event</button> -->
         </div>
       </div>
       </form>

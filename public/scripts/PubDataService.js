@@ -1,20 +1,27 @@
 // This is a Factory type AngularJS Service
 
-angular.module('publicApp').factory('PubDataService', function($http){
+angular.module('publicApp').factory('PubDataService', function($http, calendarConfig){
   var data = {};
-
-  function handleSuccess(res){
-    console.log(res);
-    data.events = response.data
-  }
-
-  function handleFailure(res){
-    console.log('EVERYTHING\'S ON FIRE', res);
-  }
 
   // List all events
   function showEvents(){
     $http.get('/showEvents').then(function(res){
+      console.log('Events:', res.data);
+      for (var i = 0; i < res.data.length; i++) {
+
+        switch (res.data[i].color) {
+          case 'public':
+            res.data[i].color = calendarConfig.colorTypes.public;
+          break;
+          case 'private':
+            res.data[i].color = calendarConfig.colorTypes.private;
+          break;
+          case 'artInRes':
+            res.data[i].color = calendarConfig.colorTypes.artInRes;
+          break;
+        }
+      }
+
       data.events = res.data;
     }, function(res){
       console.log('Fail', res);

@@ -19,21 +19,21 @@
       <div class="btn-group btn-group-xs">
 
         <button
-          class="btn btn-primary robotoLite"
+          class="btn btn-main robotoLite"
           mwl-date-modifier
           date="aec.viewDate"
           decrement="aec.calendarView">
           Previous
         </button>
         <button
-          class="btn btn-default robotoLite"
+          class="btn btn-alt robotoLite"
           mwl-date-modifier
           date="aec.viewDate"
           set-to-today>
           Today
         </button>
         <button
-          class="btn btn-primary robotoLite"
+          class="btn btn-main robotoLite"
           mwl-date-modifier
           date="aec.viewDate"
           increment="aec.calendarView">
@@ -46,10 +46,10 @@
 
     <div class="col-sm-4 text-center pull-right">
       <div class="btn-group  btn-group-xs">
-        <label class="btn btn-primary robotoLite" ng-model="aec.calendarView" uib-btn-radio="'year'">Year</label>
-        <label class="btn btn-primary robotoLite" ng-model="aec.calendarView" uib-btn-radio="'month'">Month</label>
-        <label class="btn btn-primary robotoLite" ng-model="aec.calendarView" uib-btn-radio="'week'">Week</label>
-        <label class="btn btn-primary robotoLite" ng-model="aec.calendarView" uib-btn-radio="'day'">Day</label>
+        <label class="btn btn-main robotoLite" ng-model="aec.calendarView" uib-btn-radio="'year'">Year</label>
+        <label class="btn btn-main robotoLite" ng-model="aec.calendarView" uib-btn-radio="'month'">Month</label>
+        <label class="btn btn-main robotoLite" ng-model="aec.calendarView" uib-btn-radio="'week'">Week</label>
+        <label class="btn btn-main robotoLite" ng-model="aec.calendarView" uib-btn-radio="'day'">Day</label>
       </div>
     </div>
 
@@ -86,9 +86,9 @@
           </tr>
         </thead>
         <tbody ng-repeat="event in aec.events.events | orderBy : 'startsAt'">
-          <tr ng-click="aec.editEventClicked(event)">
-            <td><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
-            <td><p class="table-info">{{event.title}}</p></td>
+          <tr>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.title}}</p></td>
             <td class="center">
               <span class="glyphicon glyphicon-remove text-danger" ng-click="aec.deleteEvent(event._id)"></span>
             </td>
@@ -97,5 +97,5 @@
       </table>
     </li>
   </ul>
-  <button type="button" class="btn btn-success" ng-click="aec.addEventClicked()">Add Event</button>
+  <button type="button" class="btn btn-main col-sm-6 col-sm-offset-3" ng-click="aec.addEventClicked()">Add Event</button>
 </div>

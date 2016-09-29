@@ -17,7 +17,7 @@ angular.module('adminApp').factory('DataService', function($http, calendarConfig
       $http.put('/editEvent/' + eventData.id, eventData).then(function(res){
         console.log(res);
         console.log('Edit Event', eventData.id);
-        ;;showEvents();
+        showEvents();
       }, function(res){
         console.log('Failure is not accepted!', res);
       })
@@ -28,7 +28,7 @@ angular.module('adminApp').factory('DataService', function($http, calendarConfig
     $http.get('/showEvents').then(function(res) {
       for (var i = 0; i < res.data.length; i++) {
 
-        switch (res.data[i].color) {
+        switch (res.data[i].eventType) {
           case 'public':
             res.data[i].color = calendarConfig.colorTypes.public;
           break;

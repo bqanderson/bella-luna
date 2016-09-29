@@ -8,21 +8,21 @@
       <div class="btn-group btn-group-xs">
 
         <button
-          class="btn btn-primary robotoLite"
+          class="btn btn-main robotoLite"
           mwl-date-modifier
           date="pec.viewDate"
           decrement="pec.calendarView">
           Previous
         </button>
         <button
-          class="btn btn-default robotoLite"
+          class="btn btn-alt robotoLite"
           mwl-date-modifier
           date="pec.viewDate"
           set-to-today>
           Today
         </button>
         <button
-          class="btn btn-primary robotoLite"
+          class="btn btn-main robotoLite"
           mwl-date-modifier
           date="pec.viewDate"
           increment="pec.calendarView">
@@ -35,10 +35,10 @@
 
     <div class="col-sm-4 text-center pull-right">
       <div class="btn-group  btn-group-xs">
-        <label class="btn btn-primary robotoLite" ng-model="pec.calendarView" uib-btn-radio="'year'">Year</label>
-        <label class="btn btn-primary robotoLite" ng-model="pec.calendarView" uib-btn-radio="'month'">Month</label>
-        <label class="btn btn-primary robotoLite" ng-model="pec.calendarView" uib-btn-radio="'week'">Week</label>
-        <label class="btn btn-primary robotoLite" ng-model="pec.calendarView" uib-btn-radio="'day'">Day</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'year'">Year</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'month'">Month</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'week'">Week</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'day'">Day</label>
       </div>
     </div>
 
@@ -82,6 +82,8 @@
       </table>
     </li>
   </ul>
-  <button type="button" class="btn btn-success" ng-click="pec.suggestEvent()">Suggest Event</button>
-  <button type="button" class="btn btn-primary" ng-click="pec.reqResidency()">Request Artist in Residency</button>
+  <div class="center">
+    <button type="button" class="btn btn-main" ng-click="pec.suggestEvent()">Suggest Event</button>
+    <button type="button" class="btn btn-alt" ng-click="pec.reqResidency()">Request Artist in Residency</button>
+  </div>
 </div>

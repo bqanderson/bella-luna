@@ -8,6 +8,7 @@ router.post('/', function(req, res){
   var createAdminEvent = new AdminEvent({
     title: data.title,
     color: data.color,
+    eventType: data.eventType,
     startsAt: data.startsAt,
     endsAt: data.endsAt,
     draggable: data.draggable,

@@ -9,7 +9,7 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
       console.log('Events:', res.data);
       for (var i = 0; i < res.data.length; i++) {
 
-        switch (res.data[i].color) {
+        switch (res.data[i].eventType) {
           case 'public':
             res.data[i].color = calendarConfig.colorTypes.public;
           break;

@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var adminEventSchema = new Schema({
   title: String,
   color: String,
+  eventType: String,
   startsAt: Date,
   endsAt: Date,
   draggable: Boolean,

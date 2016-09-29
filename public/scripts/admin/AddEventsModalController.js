@@ -94,11 +94,12 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
 
     sendData.id = vm.id;
     sendData.title = vm.title;
+    sendData.color = vm.color;
+    sendData.eventType = vm.eventType;
     sendData.startsAt = vm.startsAt;
     sendData.endsAt = vm.endsAt;
     sendData.description = vm.description;
     sendData.tixLink = vm.tixLink;
-    sendData.color = vm.color;
     sendData.pubToBella = vm.pubToBella;
     sendData.pubToFacebook = vm.pubToFacebook;
     sendData.pubToAnnette = vm.pubToAnnette;

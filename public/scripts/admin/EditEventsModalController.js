@@ -3,11 +3,12 @@ angular.module('adminApp').controller('EditedEventsModalController', function($h
 
   vm.id = sendData._id;
   vm.title = sendData.title;
+  vm.color = sendData.color;
+  vm.eventType = sendData.eventType;
   vm.startsAt = sendData.startsAt;
   vm.endsAt = sendData.endsAt;
   vm.description = sendData.description;
   vm.tixLink = sendData.tixLink;
-  vm.color = sendData.color;
   vm.pubToBella = sendData.pubToBella;
   vm.pubToFacebook = sendData.pubToFacebook;
   vm.pubToAnnette = sendData.pubToAnnette;
@@ -116,11 +117,11 @@ angular.module('adminApp').controller('EditedEventsModalController', function($h
 
     sendData.id = vm.id;
     sendData.title = vm.title;
+    sendData.eventType = vm.eventType;
     sendData.startsAt = vm.startsAt;
     sendData.endsAt = vm.endsAt;
     sendData.description = vm.description;
     sendData.tixLink = vm.tixLink;
-    sendData.color = vm.color;
     sendData.pubToBella = vm.pubToBella;
     sendData.pubToFacebook = vm.pubToFacebook;
     sendData.pubToAnnette = vm.pubToAnnette;

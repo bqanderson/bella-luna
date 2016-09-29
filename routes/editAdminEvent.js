@@ -12,7 +12,7 @@ router.put('/:id', function(req, res){
       res.sendStatus(500);
     } else {
       var title = data.title;
-      var color = data.color;
+      var eventType = data.eventType;
       var startsAt = data.startsAt;
       var endsAt = data.endsAt;
       var description = data.description;
@@ -23,8 +23,8 @@ router.put('/:id', function(req, res){
       if(title){
         events.title = title;
       }
-      if(color){
-        events.color = color;
+      if(eventType){
+        events.eventType = eventType;
       }
       if(startsAt){
         events.startsAt = startsAt;

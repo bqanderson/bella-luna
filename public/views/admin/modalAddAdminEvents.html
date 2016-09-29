@@ -92,16 +92,17 @@
         </label>
         </div> -->
 
-        <div class="col-md-12">
-          <h3 class="panel-title">Select Event Type</h3>
-          <select class="form-control" ng-model="aemc.color">
+        <div class="col-md-12 form-group">
+          <!-- <h3 class="panel-title">Select Event Type</h3> -->
+          <select required class="form-control squarecorners" ng-model="aemc.eventType">
+            <option value="" disabled selected hidden class="placeholder">Please Choose Event Type...</option>
             <option value="public">Public Event</option>
             <option value="private">Private Event</option>
             <option value="artInRes">Artist in Residence</option>
           </select>
         </div>
         <div class="center">
-          <button class="btn btn-primary" ng-click="$close(aemc.createAdminEvent())">Add New Event</button>
+          <button class="btn btn-main" ng-click="$close(aemc.createAdminEvent())">Add New Event</button>
         </div>
       </div>
       </form>

@@ -73,7 +73,7 @@
             <th class="robotoBold col-sm-8">Event Name</th>
           </tr>
         </thead>
-        <tbody ng-repeat="event in pec.data.events | orderBy : 'startsAt'">
+        <tbody ng-repeat="event in pec.data.events | orderBy : 'startsAt' track by $index">
           <tr ng-click="pec.viewEventClicked(event)">
             <td><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
             <td><p class="table-info">{{event.title}}</p></td>

@@ -2,6 +2,14 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
 
   var vm = this;
 
+    vm.showGuest = function(){
+      $http.get('/showGuest').then(function(res) {
+        vm.guests = res.data;
+      }, function(res){
+        console.log('Fail', res);
+      })
+    }
+
   // Add Guest code
   vm.addGuest = function(){
     console.log('Add Guest Clicked');
@@ -17,20 +25,12 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
     }, function(){
       console.log('Fail');
     })
+
     vm.firstName = null;
     vm.lastName = null;
     vm.email = null;
     vm.showGuest();
 
-  }
-
-  vm.showGuest = function(){
-    $http.get('/showGuest').then(function(res) {
-      console.log(res.data);
-      vm.guests = res.data;
-    }, function(res){
-      console.log('Fail', res);
-    })
   }
 
   vm.deleteGuest = function(index){

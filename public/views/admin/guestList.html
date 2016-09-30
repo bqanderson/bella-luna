@@ -59,17 +59,17 @@
       </table>
 
       <form class="form-inline">
-        <div class="form-group col-sm-3">
-          <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="glc.firstName" />
+        <div class="form-group guest-list">
+          <input type="text" class="form-control" placeholder="First Name" ng-model="glc.firstName" />
         </div>
-        <div class="form-group col-sm-3">
-          <input type="text" class="form-control input-sm" placeholder="Last Name" ng-model="glc.lastName" />
+        <div class="form-group guest-list">
+          <input type="text" class="form-control" placeholder="Last Name" ng-model="glc.lastName" />
         </div>
-        <div class="form-group col-sm-4">
-          <input type="email" class="form-control input-sm" placeholder="Email Address" ng-model="glc.email" />
+        <div class="form-group guest-list`">
+          <input type="email" class="form-control" placeholder="Email Address" ng-model="glc.email" />
         </div>
-        <div class="form-group col-sm-2">
-          <button class="btn btn-primary btn-sm input-sm" ng-click="glc.addGuest()">Add Guest</button>
+        <div class="form-group">
+          <button class="btn btn-main" ng-click="glc.addGuest(showGuest())">Add Guest</button>
         </div>
       </form>
   </div>
@@ -89,7 +89,7 @@
           <input type="text" class="form-control" ng-model="glc.eventLink" placeholder="Event Link (optional)" />
         </div>
         <div class="form-group center">
-          <button class="btn btn-success" ng-click="glc.sendEmail()">Send Email</button>
+          <button class="btn btn-main" ng-click="glc.sendEmail()">Send Email</button>
         </div>
       </form>
     </div>

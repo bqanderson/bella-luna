@@ -18,19 +18,11 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
   };
 
   vm.dateOptions = {
-    // dateDisabled: disabled,
     formatYear: 'yy',
     maxDate: new Date(2020, 5, 22),
     minDate: new Date(),
     startingDay: 1
   };
-
-  // Disable weekend selection
-  // function disabled(data) {
-  //   var date = data.date,
-  //     mode = data.mode;
-  //   return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
-  // }
 
   vm.toggleMin = function() {
     vm.inlineOptions.minDate = vm.inlineOptions.minDate ? null : new Date();
@@ -92,7 +84,6 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
 
     var sendData = {};
 
-    sendData.id = vm.id;
     sendData.title = vm.title;
     sendData.color = vm.color;
     sendData.eventType = vm.eventType;
@@ -105,7 +96,7 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
     sendData.pubToAnnette = vm.pubToAnnette;
 
     DataService.createAdminEvent(sendData)
-    console.log('Data:', sendData);
+    // console.log('Data:', sendData);
 
   }
 

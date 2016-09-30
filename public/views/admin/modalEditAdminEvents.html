@@ -92,9 +92,10 @@
         </label>
         </div> -->
 
-        <div class="col-md-12">
-          <h3 class="panel-title">Select Event Type</h3>
-          <select class="form-control" ng-model="eemc.eventType">
+        <div class="col-md-12 form-group">
+          <!-- <h3 class="panel-title">Select Event Type</h3> -->
+          <select class="form-control squarecorners" ng-model="eemc.eventType">
+            <option value="" disabled selected hidden class="placeholder">Please Choose Event Type...</option>
             <option value="public">Public Event</option>
             <option value="private">Private Event</option>
             <option value="artInRes">Artist in Residence</option>

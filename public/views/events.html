@@ -47,11 +47,11 @@
   <br>
 
   <mwl-calendar
-    events="pec.data.events"
+    events="pec.events.events"
     view="pec.calendarView"
     view-title="pec.calendarTitle"
     view-date="pec.viewDate"
-    on-event-click="pec.editEventClicked(calendarEvent)"
+    on-event-click="pec.viewEventClicked(calendarEvent)"
     on-event-times-changed="pec.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
     cell-is-open="pec.isCellOpen"
     day-view-start="06:00"
@@ -73,7 +73,7 @@
             <th class="robotoBold col-sm-8">Event Name</th>
           </tr>
         </thead>
-        <tbody ng-repeat="event in pec.data.events | orderBy : 'startsAt' track by $index">
+        <tbody ng-repeat="event in pec.events.events | orderBy : 'startsAt' track by $index">
           <tr ng-click="pec.viewEventClicked(event)">
             <td><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
             <td><p class="table-info">{{event.title}}</p></td>
@@ -84,6 +84,6 @@
   </ul>
   <div class="center">
     <button type="button" class="btn btn-main" ng-click="pec.suggestEvent()">Suggest Event</button>
-    <button type="button" class="btn btn-alt" ng-click="pec.reqResidency()">Request Artist in Residency</button>
+    <button type="button" class="btn btn-alt" ng-click="pec.requestAIR()">Request Artist in Residency</button>
   </div>
 </div>

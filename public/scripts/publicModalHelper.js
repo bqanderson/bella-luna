@@ -28,8 +28,27 @@ angular.module('publicApp').factory('alert', function($uibModal, $http){
     });
   }
 
+  function suggestEvent(){
+    return $uibModal.open({
+      templateUrl: '../views/modalSuggestEvent.html'
+      // controller: 'SuggestEventController',
+      // controllerAs: 'sec'
+    })
+  }
+
+  function requestAIR(){
+    return $uibModal.open({
+      templateUrl: '../views/modalRequestAIR.html'
+      // controller: 'RequestAirController',
+      // controllerAs: 'rac'
+    })
+  }
+
   return {
-    showEvent: showEvent
+    showEvent: showEvent,
+    suggestEvent: suggestEvent,
+    requestAIR: requestAIR
+
   };
 
 });

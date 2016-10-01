@@ -3,6 +3,7 @@ angular.module('publicApp').controller('ViewEventModalController', function($htt
 
   vm.id = sendData._id;
   vm.title = sendData.title;
+  vm.eventType = sendData.eventType;
   vm.startsAt = sendData.startsAt;
   vm.endsAt = sendData.endsAt;
   vm.description = sendData.description;

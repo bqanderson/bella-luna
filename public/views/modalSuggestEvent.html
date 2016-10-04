@@ -1,26 +1,96 @@
 <div class="container-fluid modal-view">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="text-center oldStandard">Suggest an Event</h3>
+      <h3 class="panel-title">Suggest an Event</h3>
     </div>
     <div class="panel-body">
-      <div class="form-group">
+
+      <div>
+        <p class="help-block">
+          We are always looking for new events to host at Bella Luna Studios at the Wolf House MPLS.
+          Feel free to make any suggestion that you think would be a good fit. Please fill out the form
+          below and someone will get back to you shortly.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="panel-title">Contact Information</h3>
+      </div>
         <form>
-          <div class="form-group">
-            <input type="text" class="form-control" ng-model="glc.emailSubject" placeholder="Email Subject" />
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" ng-model="sec.firstName" placeholder="First Name" />
           </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="16" ng-model="glc.emailMessage" placeholder="Email Message"></textarea>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" ng-model="sec.lastName" placeholder="Last Name" />
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" ng-model="glc.eventLink" placeholder="Event Link (optional)" />
+          <div class="form-group col-md-12">
+            <input type="email" class="form-control" ng-model="sec.email" placeholder="Email" />
           </div>
-          <div class="form-group center">
-            <button class="btn btn-main" ng-click="glc.sendEmail()">Send Email</button>
+          <div class="form-group col-md-6">
+            <input type="phone" class="form-control" ng-model="sec.phone" placeholder="Phone Number" />
+          </div>
+          <div class="form-group col-md-6">
+            <select required class="form-control squarecorners" ng-model="sec.contactMethod">
+              <option value="" disabled selected hidden class="placeholder">Preferred Contact Method...</option>
+              <option value="public">Phone</option>
+              <option value="private">Email</option>
+            </select>
           </div>
         </form>
+
+
+      <div class="col-md-12 modal-underline"> </div>
+
+      <h3 class="panel-title">Event Information</h3>
+      <div class="form-group col-md-12">
+        <input
+          type="text"
+          class="form-control"
+          ng-model="sec.eventTitle"
+          placeholder="Event Title"
+        />
       </div>
+      <div class="col-md-12 form-group">
+        <textarea
+          class="form-control"
+          rows="5"
+          ng-model="sec.eventDescription"
+          placeholder="Event Description">
+        </textarea>
+      </div>
+      <div class="form-group col-md-12">
+        <input
+          type="text"
+          class="form-control"
+          ng-model="sec.performers"
+          placeholder="Name of Performer"
+        />
+      </div>
+      <div class="col-md-12">
+        <p class="input-group">
+          <input type="text"
+            class="form-control"
+            uib-datepicker-popup="{{sec.dataformat}}"
+            ng-model="sec.startsAt"
+            is-open="sec.popup1.opened"
+            datepicker-options="sec.dateOptions"
+            ng-required="true"
+            close-text="Close"
+            alt-input-formats="sec.altInputFormats"
+            placeholder="Suggested Date" />
+          <span class="input-group-btn">
+            <button type="button"
+              class="btn btn-default"
+              ng-click="sec.open1()">
+              <i class="glyphicon glyphicon-calendar"></i>
+            </button>
+          </span>
+        </p>
+      </div>
+      <div class="center">
+        <button class="btn btn-main" ng-click="$close(sec.sendEmail())">Add New Event</button>
+      </div>
+
     </div>
   </div>
-
 </div>

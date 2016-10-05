@@ -4,22 +4,116 @@
       <h3 class="panel-title">Request Artist In Residency</h3>
     </div>
     <div class="panel-body">
-      <div class="form-group">
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" ng-model="rac.emailSubject" placeholder="Email Subject" />
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="16" ng-model="rac.emailMessage" placeholder="Email Message"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" ng-model="rac.eventLink" placeholder="Event Link (optional)" />
-          </div>
-          <div class="form-group center">
-            <button class="btn btn-main" ng-click="$close(rac.sendEmail())">Send Request</button>
-          </div>
-        </form>
+
+      <div>
+        <p class="help-block">
+          Are you a writer, musician, or visual artist looking for a quiet,
+          magical space filled with natural insperation?<br />
+          Bella Luna Studios at The Wolf House MPLS is open for week long
+          (or longer) Artist in Residencies. Please fill out the form below,
+          including your statement of intent and we will contact you if the fit
+          seems right.
+        </p>
       </div>
+
+      <div>
+        <h3 class="panel-title">Contact Information</h3>
+      </div>
+      <form>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" ng-model="rac.firstName" placeholder="First Name" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" ng-model="rac.lastName" placeholder="Last Name" />
+        </div>
+        <div class="form-group col-md-12">
+          <input type="email" class="form-control" ng-model="rac.email" placeholder="Email" />
+        </div>
+        <div class="form-group col-md-12">
+          <input type="text" class="form-control" ng-model="rac.address1" placeholder="Address 1" />
+        </div>
+        <div class="form-group col-md-12">
+          <input type="text" class="form-control" ng-model="rac.address2" placeholder="Address 2" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" ng-model="rac.city" placeholder="City/Town" />
+        </div>
+        <div class="form-group col-md-2">
+          <select required class="form-control squarecorners" ng-model="rac.state">
+            <option value="" disabled selected hidden class="placeholder">State</option>
+            <option value="AL">AL</option>
+          	<option value="AK">AK</option>
+          	<option value="AZ">AZ</option>
+          	<option value="AR">AR</option>
+          	<option value="CA">CA</option>
+          	<option value="CO">CO</option>
+          	<option value="CT">CT</option>
+          	<option value="DE">DE</option>
+          	<option value="DC">DC</option>
+          	<option value="FL">FL</option>
+          	<option value="GA">GA</option>
+          	<option value="HI">HI</option>
+          	<option value="ID">ID</option>
+          	<option value="IL">IL</option>
+          	<option value="IN">IN</option>
+          	<option value="IA">IA</option>
+          	<option value="KS">KS</option>
+          	<option value="KY">KY</option>
+          	<option value="LA">LA</option>
+          	<option value="ME">ME</option>
+          	<option value="MD">MD</option>
+          	<option value="MA">MA</option>
+          	<option value="MI">MI</option>
+          	<option value="MN">MN</option>
+          	<option value="MS">MS</option>
+          	<option value="MO">MO</option>
+          	<option value="MT">MT</option>
+          	<option value="NE">NE</option>
+          	<option value="NV">NV</option>
+          	<option value="NH">NH</option>
+          	<option value="NJ">NJ</option>
+          	<option value="NM">NM</option>
+          	<option value="NY">NY</option>
+          	<option value="NC">NC</option>
+          	<option value="ND">ND</option>
+          	<option value="OH">OH</option>
+          	<option value="OK">OK</option>
+          	<option value="OR">OR</option>
+          	<option value="PA">PA</option>
+          	<option value="RI">RI</option>
+          	<option value="SC">SC</option>
+          	<option value="SD">SD</option>
+          	<option value="TN">TN</option>
+          	<option value="TX">TX</option>
+          	<option value="UT">UT</option>
+          	<option value="VT">VT</option>
+          	<option value="VA">VA</option>
+          	<option value="WA">WA</option>
+          	<option value="WV">WV</option>
+          	<option value="WI">WI</option>
+          	<option value="WY">WY</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <input type="number" class="form-control" ng-model="rac.zip" placeholder="Zip Code" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="phone" class="form-control" ng-model="sec.phone" placeholder="Phone Number" />
+        </div>
+        <div class="form-group col-md-6">
+          <select required class="form-control squarecorners" ng-model="sec.contactMethod">
+            <option value="" disabled selected hidden class="placeholder">Preferred Contact Method...</option>
+            <option value="public">Phone</option>
+            <option value="private">Email</option>
+          </select>
+        </div>
+
+        <div class="col-md-12 modal-underline"> </div>
+
+        <div>
+          <h3 class="panel-title">Residency Information</h3>
+        </div>
+      </form>
     </div>
   </div>
 

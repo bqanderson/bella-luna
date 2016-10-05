@@ -81,8 +81,15 @@ router.post('/suggestEvent', function(req, res){
     from: '"Bella Luna Studios at The Wolf House NE" <info.bellalunastudios@gmail.com>',
     to: '"Annette Schiebout" <aschiebout@hotmail.com>, "Brian: iCloud" <bqanderson@me.com>',
     cc: '"Brian: gmail" <b.quinn.anderson@gmail.com',
-    subject: data.subject,
-    text: data.message + '\n\n' + data.link
+    subject: 'Suggested Event: ' + data.eventTitle,
+    text: 'Contact Name: ' + data.firstName + ' ' + data.lastName + '\n\n' +
+          'Email: ' + data.email + '\n\n' +
+          'Phone Number: ' + data.phone + '\n\n' +
+          'Preferred Method of Contact: ' + '\n\n' +
+          'Event Title: ' + data.eventTitle + '\n\n' +
+          'Event Description: ' + data.eventDescription + '\n\n' +
+          'Event Date ' + data.date
+
   };
 
   transporter.sendMail(mailOptions, function(error, info){

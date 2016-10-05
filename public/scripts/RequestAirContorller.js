@@ -5,9 +5,21 @@ angular.module('publicApp').controller('RequestAirController', function function
 
     var sendData = {};
 
-    sendData.subject = vm.emailSubject;
-    sendData.message = vm.emailMessage;
-    sendData.link = vm.eventLink;
+    sendData.firstName = vm.firstName;
+    sendData.lastName = vm.lastName;
+    sendData.email = vm.email;
+    sendData.address1 = vm.address1;
+    if (vm.address2 != undefined) {
+      sendData.address2 = vm.address2;
+    }
+    sendData.city = vm.city;
+    sendData.state = vm.state;
+    sendData.zip = vm.zip;
+    sendData.phone = vm.phone;
+    sendData.contatMethod = vm.contatMethod;
+    sendData.startDate = vm.startDate;
+    sendData.endDate = vm.endDate;
+    sendData.intent = vm.intent;
 
     console.log('Email Info:', sendData);
 

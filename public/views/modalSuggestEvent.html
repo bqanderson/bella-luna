@@ -58,39 +58,38 @@
           placeholder="Event Description">
         </textarea>
       </div>
-      <div class="form-group col-md-12">
+      <!-- <div class="form-group col-md-12">
         <input
           type="text"
           class="form-control"
           ng-model="sec.performers"
           placeholder="Name of Performer"
-        />
+        /> -->
+        <div class="col-md-12">
+          <p class="input-group">
+            <input type="text"
+              class="form-control"
+              uib-datepicker-popup="{{sec.dataformat}}"
+              ng-model="sec.date"
+              is-open="sec.popup1.opened"
+              datepicker-options="sec.dateOptions"
+              ng-required="true"
+              close-text="Close"
+              alt-input-formats="sec.altInputFormats"
+              placeholder="Suggested Date" />
+            <span class="input-group-btn">
+              <button type="button"
+                class="btn btn-default"
+                ng-click="sec.open1()">
+                <i class="glyphicon glyphicon-calendar"></i>
+              </button>
+            </span>
+          </p>
+        </div>
+        <div class="center">
+          <button class="btn btn-main" ng-click="$close(sec.sendEmail())">Add New Event</button>
+        </div>
       </div>
-      <div class="col-md-12">
-        <p class="input-group">
-          <input type="text"
-            class="form-control"
-            uib-datepicker-popup="{{sec.dataformat}}"
-            ng-model="sec.startsAt"
-            is-open="sec.popup1.opened"
-            datepicker-options="sec.dateOptions"
-            ng-required="true"
-            close-text="Close"
-            alt-input-formats="sec.altInputFormats"
-            placeholder="Suggested Date" />
-          <span class="input-group-btn">
-            <button type="button"
-              class="btn btn-default"
-              ng-click="sec.open1()">
-              <i class="glyphicon glyphicon-calendar"></i>
-            </button>
-          </span>
-        </p>
-      </div>
-      <div class="center">
-        <button class="btn btn-main" ng-click="$close(sec.sendEmail())">Add New Event</button>
-      </div>
-
     </div>
   </div>
 </div>

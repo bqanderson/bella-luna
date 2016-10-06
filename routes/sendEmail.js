@@ -50,8 +50,16 @@ router.post('/requestAIR', function(req, res){
     from: '"Bella Luna Studios at The Wolf House NE" <info.bellalunastudios@gmail.com>',
     to: '"Annette Schiebout" <aschiebout@hotmail.com>, "Brian: iCloud" <bqanderson@me.com>',
     cc: '"Brian: gmail" <b.quinn.anderson@gmail.com',
-    subject: data.subject,
-    text: data.message + '\n\n' + data.link
+    subject: 'Artist in Residency Request',
+    text: 'Artist Name: ' + data.firstName + ' ' + data.lastName + '\n\n' +
+          'Email: ' + data.email + '\n\n' +
+          'Phone Number: ' + data.phone + '\n\n' +
+          'Address: ' + data.address1 + ', ' + data.address2 + '\n\n' +
+          'City, State, Zip: ' + data.city + ', ' + data.state + ' ' + data.zip + '\n\n' +
+          'Preferred Method of Contact: ' + data.contactMethod + '\n\n' +
+          'Residency Intent: ' + data.intent + '\n\n' +
+          'Start Data: ' + data.startDate + '\n\n' +
+          'End Date ' + data.endDate
   };
 
   transporter.sendMail(mailOptions, function(error, info){
@@ -85,7 +93,7 @@ router.post('/suggestEvent', function(req, res){
     text: 'Contact Name: ' + data.firstName + ' ' + data.lastName + '\n\n' +
           'Email: ' + data.email + '\n\n' +
           'Phone Number: ' + data.phone + '\n\n' +
-          'Preferred Method of Contact: ' + '\n\n' +
+          'Preferred Method of Contact: ' + data.contactMethod + '\n\n' +
           'Event Title: ' + data.eventTitle + '\n\n' +
           'Event Description: ' + data.eventDescription + '\n\n' +
           'Event Date ' + data.date

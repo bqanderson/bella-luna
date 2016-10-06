@@ -98,13 +98,14 @@
           <input type="number" class="form-control" ng-model="rac.zip" placeholder="Zip Code" />
         </div>
         <div class="form-group col-md-6">
-          <input type="phone" class="form-control" ng-model="sec.phone" placeholder="Phone Number" />
+          <input type="phone" class="form-control" ng-model="rac.phone" placeholder="Phone Number" />
         </div>
         <div class="form-group col-md-6">
-          <select required class="form-control squarecorners" ng-model="sec.contactMethod">
+          <select required class="form-control squarecorners" ng-model="rac.contactMethod">
             <option value="" disabled selected hidden class="placeholder">Preferred Contact Method...</option>
-            <option value="public">Phone</option>
-            <option value="private">Email</option>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+            <option value="snailMail">Snail Mail</option>
           </select>
         </div>
 
@@ -113,6 +114,60 @@
         <div>
           <h3 class="panel-title">Residency Information</h3>
         </div>
+        <div class="col-md-12 form-group">
+          <textarea
+            class="form-control"
+            rows="5"
+            ng-model="rac.intent"
+            placeholder="Statement of Intent">
+          </textarea>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6">
+            <p class="input-group">
+              <input type="text"
+                class="form-control"
+                uib-datepicker-popup="shortDate"
+                ng-model="rac.startDate"
+                is-open="rac.popup1.opened"
+                datepicker-options="rac.dateOptions"
+                ng-required="true"
+                close-text="Close"
+                alt-input-formats="rac.altInputFormats"
+                placeholder="Start Date" />
+              <span class="input-group-btn">
+                <button type="button"
+                  class="btn btn-default"
+                  ng-click="rac.open1()">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="input-group">
+              <input type="text"
+                class="form-control"
+                uib-datepicker-popup="shortDate"
+                ng-model="rac.endDate"
+                is-open="rac.popup2.opened"
+                datepicker-options="rac.dateOptions"
+                ng-required="true"
+                close-text="Close"
+                alt-input-formats="rac.altInputFormats"
+                placeholder="End Date" />
+              <span class="input-group-btn">
+                <button type="button"
+                  class="btn btn-default"
+                  ng-click="rac.open2()">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </p>
+          </div>
+          <div class="center">
+            <button class="btn btn-main" ng-click="$close(rac.sendEmail())">Request Residency</button>
+          </div>
       </form>
     </div>
   </div>

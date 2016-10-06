@@ -84,6 +84,8 @@ angular.module('publicApp').controller('SuggestEventController', function functi
 
     var sendData = {};
 
+    var formDate = moment(vm.date).format('dddd, MMMM Do YYYY')
+
     sendData.firstName = vm.firstName;
     sendData.lastName = vm.lastName;
     sendData.email = vm.email;
@@ -92,7 +94,7 @@ angular.module('publicApp').controller('SuggestEventController', function functi
     sendData.eventTitle = vm.eventTitle;
     sendData.eventDescription = vm.eventDescription;
     sendData.contactMethod = vm.contactMethod;
-    sendData.date = vm.date;
+    sendData.date = formDate;
 
     console.log('Email Info:', sendData);
 

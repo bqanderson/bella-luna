@@ -21,7 +21,7 @@
           <p class="input-group">
             <input type="text"
               class="form-control"
-              uib-datepicker-popup="{{aemc.dataformat}}"
+              uib-datepicker-popup="shortDate"
               ng-model="aemc.startsAt"
               is-open="aemc.popup1.opened"
               datepicker-options="aemc.dateOptions"
@@ -42,7 +42,7 @@
           <p class="input-group">
             <input type="text"
               class="form-control"
-              uib-datepicker-popup="{{aemc.format}}"
+              uib-datepicker-popup="shortDate"
               ng-model="aemc.endsAt"
               is-open="aemc.popup2.opened"
               datepicker-options="aemc.dateOptions"
@@ -64,7 +64,8 @@
           ng-model="aemc.startsAt"
           hour-step="1"
           minute-step="15"
-          show-meridian="true"
+          mousewheel="false"
+          show-spinners="false"
           class="col-md-6">
         </div>
         <div
@@ -72,7 +73,8 @@
           ng-model="aemc.endsAt"
           hour-step="1"
           minute-step="15"
-          show-meridian="true"
+          mousewheel="false"
+          show-spinners="false"
           class="col-md-6">
         </div>
         <div class="col-md-12 form-group">

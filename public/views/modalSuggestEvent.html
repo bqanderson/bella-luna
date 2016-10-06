@@ -58,18 +58,11 @@
           placeholder="Event Description">
         </textarea>
       </div>
-      <!-- <div class="form-group col-md-12">
-        <input
-          type="text"
-          class="form-control"
-          ng-model="sec.performers"
-          placeholder="Name of Performer"
-        /> -->
         <div class="col-md-12">
           <p class="input-group">
             <input type="text"
               class="form-control"
-              uib-datepicker-popup="{{sec.dataformat}}"
+              uib-datepicker-popup="shortDate"
               ng-model="sec.date"
               is-open="sec.popup1.opened"
               datepicker-options="sec.dateOptions"

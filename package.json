@@ -38,3 +38,7 @@
     "ui-bootstrap": "^0.1.2"
   }
 }
+
+"engines": {
+  "node": "6.5.0"
+}

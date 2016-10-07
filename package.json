@@ -36,9 +36,8 @@
     "passport-local": "^1.0.0",
     "requirejs": "^2.2.0",
     "ui-bootstrap": "^0.1.2"
+  },
+  "engines": {
+    "node": "6.5.0"
   }
-}
-
-"engines": {
-  "node": "6.5.0"
 }

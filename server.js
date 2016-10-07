@@ -82,7 +82,10 @@ app.use('/sendEmail', sendEmail);
 //   res.sendFile(path.resolve(__dirname, 'public/views/admin.html'));
 // });
 
-mongoose.connect('mongodb://localhost:27017/bella-luna');
+var mLabUser = process.env.mLabUser;
+var mLabPass = process.env.mLabPass;
+
+mongoose.connect('mongodb://'+mLabUser+':'+mLabPass+'@ds021346.mlab.com:21346/bella-luna');
 
 passport.serializeUser(function(user, done){
   done(null, user.id);

@@ -22,7 +22,9 @@ module.exports = function(grunt) {
             'angular-animate/**',
             'angular-momentjs/**',
             'moment/**',
-            'requirejs/**'],
+            'requirejs/**',
+            'jquery/**',
+            'jquery-migrate/**'],
 
             dest: 'public/vendor'
           },

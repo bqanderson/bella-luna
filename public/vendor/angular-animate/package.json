@@ -2,17 +2,18 @@
   "_args": [
     [
       {
-        "name": "angular-animate",
-        "raw": "angular-animate",
-        "rawSpec": "",
+        "raw": "angular-animate@^1.5.8",
         "scope": null,
-        "spec": "latest",
-        "type": "tag"
+        "escapedName": "angular-animate",
+        "name": "angular-animate",
+        "rawSpec": "^1.5.8",
+        "spec": ">=1.5.8 <2.0.0",
+        "type": "range"
       },
-      "/Users/brianqanderson/bella-luna"
+      "/Users/briananderson/bella-luna/bella-luna"
     ]
   ],
-  "_from": "angular-animate@latest",
+  "_from": "angular-animate@>=1.5.8 <2.0.0",
   "_id": "angular-animate@1.5.8",
   "_inCache": true,
   "_installable": true,
@@ -23,18 +24,19 @@
     "tmp": "tmp/angular-animate-1.5.8.tgz_1469201403735_0.004368406254798174"
   },
   "_npmUser": {
-    "email": "angular-core+npm@google.com",
-    "name": "angularcore"
+    "name": "angularcore",
+    "email": "angular-core+npm@google.com"
   },
   "_npmVersion": "2.15.8",
   "_phantomChildren": {},
   "_requested": {
-    "name": "angular-animate",
-    "raw": "angular-animate",
-    "rawSpec": "",
+    "raw": "angular-animate@^1.5.8",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": "angular-animate",
+    "name": "angular-animate",
+    "rawSpec": "^1.5.8",
+    "spec": ">=1.5.8 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
@@ -42,11 +44,11 @@
   "_resolved": "https://registry.npmjs.org/angular-animate/-/angular-animate-1.5.8.tgz",
   "_shasum": "535f7369225aba7fb15bf7134c71b15bc635c586",
   "_shrinkwrap": null,
-  "_spec": "angular-animate",
-  "_where": "/Users/brianqanderson/bella-luna",
+  "_spec": "angular-animate@^1.5.8",
+  "_where": "/Users/briananderson/bella-luna/bella-luna",
   "author": {
-    "email": "angular-core+npm@google.com",
-    "name": "Angular Core Team"
+    "name": "Angular Core Team",
+    "email": "angular-core+npm@google.com"
   },
   "bugs": {
     "url": "https://github.com/angular/angular.js/issues"
@@ -81,16 +83,16 @@
   "main": "index.js",
   "maintainers": [
     {
-      "email": "a.kalinovski@gmail.com",
-      "name": "akalinovski"
+      "name": "akalinovski",
+      "email": "a.kalinovski@gmail.com"
     },
     {
-      "email": "angular-core+npm@google.com",
-      "name": "angularcore"
+      "name": "angularcore",
+      "email": "angular-core+npm@google.com"
     },
     {
-      "email": "pete@bacondarwin.com",
-      "name": "petebd"
+      "name": "petebd",
+      "email": "pete@bacondarwin.com"
     }
   ],
   "name": "angular-animate",

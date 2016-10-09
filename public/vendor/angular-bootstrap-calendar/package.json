@@ -2,17 +2,18 @@
   "_args": [
     [
       {
-        "name": "angular-bootstrap-calendar",
-        "raw": "angular-bootstrap-calendar",
-        "rawSpec": "",
+        "raw": "angular-bootstrap-calendar@^0.22.0",
         "scope": null,
-        "spec": "latest",
-        "type": "tag"
+        "escapedName": "angular-bootstrap-calendar",
+        "name": "angular-bootstrap-calendar",
+        "rawSpec": "^0.22.0",
+        "spec": ">=0.22.0 <0.23.0",
+        "type": "range"
       },
-      "/Users/brianqanderson/bella-luna"
+      "/Users/briananderson/bella-luna/bella-luna"
     ]
   ],
-  "_from": "angular-bootstrap-calendar@latest",
+  "_from": "angular-bootstrap-calendar@>=0.22.0 <0.23.0",
   "_id": "angular-bootstrap-calendar@0.22.0",
   "_inCache": true,
   "_installable": true,
@@ -23,18 +24,19 @@
     "tmp": "tmp/angular-bootstrap-calendar-0.22.0.tgz_1469631708670_0.599077123682946"
   },
   "_npmUser": {
-    "email": "matthew.lewis@socialsignin.co.uk",
-    "name": "mattlewis92"
+    "name": "mattlewis92",
+    "email": "matthew.lewis@socialsignin.co.uk"
   },
   "_npmVersion": "3.10.5",
   "_phantomChildren": {},
   "_requested": {
-    "name": "angular-bootstrap-calendar",
-    "raw": "angular-bootstrap-calendar",
-    "rawSpec": "",
+    "raw": "angular-bootstrap-calendar@^0.22.0",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": "angular-bootstrap-calendar",
+    "name": "angular-bootstrap-calendar",
+    "rawSpec": "^0.22.0",
+    "spec": ">=0.22.0 <0.23.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
@@ -42,17 +44,17 @@
   "_resolved": "https://registry.npmjs.org/angular-bootstrap-calendar/-/angular-bootstrap-calendar-0.22.0.tgz",
   "_shasum": "dbba2ea473d97d448838905656b469b549a53de5",
   "_shrinkwrap": null,
-  "_spec": "angular-bootstrap-calendar",
-  "_where": "/Users/brianqanderson/bella-luna",
+  "_spec": "angular-bootstrap-calendar@^0.22.0",
+  "_where": "/Users/briananderson/bella-luna/bella-luna",
   "bugs": {
     "url": "https://github.com/mattlewis92/angular-bootstrap-calendar/issues"
   },
   "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
     "ghooks": {
       "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
     }
   },
   "dependencies": {
@@ -119,8 +121,8 @@
   "main": "dist/js/angular-bootstrap-calendar-tpls.js",
   "maintainers": [
     {
-      "email": "matt@iwaz.at",
-      "name": "mattlewis92"
+      "name": "mattlewis92",
+      "email": "matt@iwaz.at"
     }
   ],
   "name": "angular-bootstrap-calendar",

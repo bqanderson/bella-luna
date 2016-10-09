@@ -2,35 +2,37 @@
   "_args": [
     [
       {
-        "name": "angular-momentjs",
-        "raw": "angular-momentjs",
-        "rawSpec": "",
+        "raw": "angular-momentjs@^0.2.2",
         "scope": null,
-        "spec": "latest",
-        "type": "tag"
+        "escapedName": "angular-momentjs",
+        "name": "angular-momentjs",
+        "rawSpec": "^0.2.2",
+        "spec": ">=0.2.2 <0.3.0",
+        "type": "range"
       },
-      "/Users/brianqanderson/bella-luna"
+      "/Users/briananderson/bella-luna/bella-luna"
     ]
   ],
-  "_from": "angular-momentjs@latest",
+  "_from": "angular-momentjs@>=0.2.2 <0.3.0",
   "_id": "angular-momentjs@0.2.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/angular-momentjs",
   "_nodeVersion": "0.12.6",
   "_npmUser": {
-    "email": "npm@gdi2290.com",
-    "name": "gdi2290"
+    "name": "gdi2290",
+    "email": "npm@gdi2290.com"
   },
   "_npmVersion": "2.11.2",
   "_phantomChildren": {},
   "_requested": {
-    "name": "angular-momentjs",
-    "raw": "angular-momentjs",
-    "rawSpec": "",
+    "raw": "angular-momentjs@^0.2.2",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": "angular-momentjs",
+    "name": "angular-momentjs",
+    "rawSpec": "^0.2.2",
+    "spec": ">=0.2.2 <0.3.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
@@ -38,8 +40,8 @@
   "_resolved": "https://registry.npmjs.org/angular-momentjs/-/angular-momentjs-0.2.2.tgz",
   "_shasum": "2a980b4b74039a6d45bbabaea2b0bdc0a505fad1",
   "_shrinkwrap": null,
-  "_spec": "angular-momentjs",
-  "_where": "/Users/brianqanderson/bella-luna",
+  "_spec": "angular-momentjs@^0.2.2",
+  "_where": "/Users/briananderson/bella-luna/bella-luna",
   "author": "",
   "bugs": {
     "url": "https://github.com/gdi2290/angular-momentjs/issues"
@@ -90,8 +92,8 @@
   ],
   "maintainers": [
     {
-      "email": "npm@gdi2290.com",
-      "name": "gdi2290"
+      "name": "gdi2290",
+      "email": "npm@gdi2290.com"
     }
   ],
   "name": "angular-momentjs",

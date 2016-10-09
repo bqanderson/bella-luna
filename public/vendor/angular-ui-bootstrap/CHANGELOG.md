@@ -1,3 +1,65 @@
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/angular-ui/bootstrap/compare/2.1.2...v2.1.3) (2016-08-25)
+
+
+### Bug Fixes
+
+* **modal:** compile only once with component ([969eb9c](https://github.com/angular-ui/bootstrap/commit/969eb9c)), closes [#6202](https://github.com/angular-ui/bootstrap/issues/6202) [#6201](https://github.com/angular-ui/bootstrap/issues/6201)
+
+
+
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/angular-ui/bootstrap/compare/2.1.1...v2.1.2) (2016-08-22)
+
+
+### Bug Fixes
+
+* **collapse:** revert change to transition css ([515bcf2](https://github.com/angular-ui/bootstrap/commit/515bcf2)), closes [#6196](https://github.com/angular-ui/bootstrap/issues/6196) [#6194](https://github.com/angular-ui/bootstrap/issues/6194)
+* **datepicker:** fix accidental global ([ddcacb7](https://github.com/angular-ui/bootstrap/commit/ddcacb7)), closes [#6188](https://github.com/angular-ui/bootstrap/issues/6188)
+* **modal:** close and dismiss bindings on component ([3e8ecff](https://github.com/angular-ui/bootstrap/commit/3e8ecff)), closes [#6192](https://github.com/angular-ui/bootstrap/issues/6192) [#6191](https://github.com/angular-ui/bootstrap/issues/6191)
+
+
+
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/angular-ui/bootstrap/compare/2.1.0...v2.1.1) (2016-08-21)
+
+
+### Bug Fixes
+
+* **collapse:** default to css([aef24cd](https://github.com/angular-ui/bootstrap/commit/aef24cd)), closes [#6182](https://github.com/angular-ui/bootstrap/issues/6182) [#6045](https://github.com/angular-ui/bootstrap/issues/6045)
+* **modal:** switch to .append([fb5fabf](https://github.com/angular-ui/bootstrap/commit/fb5fabf)), closes [#6187](https://github.com/angular-ui/bootstrap/issues/6187) [#6186](https://github.com/angular-ui/bootstrap/issues/6186)
+
+
+
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/angular-ui/bootstrap/compare/2.0.2...v2.1.0) (2016-08-19)
+
+
+### Bug Fixes
+
+* **collapse:** remove unnecessary inherit ([ca20be4](https://github.com/angular-ui/bootstrap/commit/ca20be4)), closes [#6164](https://github.com/angular-ui/bootstrap/issues/6164) [#6163](https://github.com/angular-ui/bootstrap/issues/6163)
+* **collapse:** set overflow to hidden on transition ([84cc2cf](https://github.com/angular-ui/bootstrap/commit/84cc2cf)), closes [#6180](https://github.com/angular-ui/bootstrap/issues/6180) [#5474](https://github.com/angular-ui/bootstrap/issues/5474)
+* **datepickerPopup:** apply timezone conversion ([f147d22](https://github.com/angular-ui/bootstrap/commit/f147d22)), closes [#6173](https://github.com/angular-ui/bootstrap/issues/6173) [#6147](https://github.com/angular-ui/bootstrap/issues/6147)
+* **modal:** improve ARIA support ([4a5e6a7](https://github.com/angular-ui/bootstrap/commit/4a5e6a7)), closes [#4772](https://github.com/angular-ui/bootstrap/issues/4772)
+* **tooltip:** close tooltip on esc ([f5ff12c](https://github.com/angular-ui/bootstrap/commit/f5ff12c)), closes [#6177](https://github.com/angular-ui/bootstrap/issues/6177) [#6108](https://github.com/angular-ui/bootstrap/issues/6108)
+
+### Features
+
+* **modal:** add component support ([2ade054](https://github.com/angular-ui/bootstrap/commit/2ade054)), closes [#5683](https://github.com/angular-ui/bootstrap/issues/5683) [#6179](https://github.com/angular-ui/bootstrap/issues/6179)
+
+
+
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/angular-ui/bootstrap/compare/2.0.1...v2.0.2) (2016-08-15)
+
+
+### Bug Fixes
+
+* **datepickerPopup:** correctly format to timezone ([fbd0845](https://github.com/angular-ui/bootstrap/commit/fbd0845)), closes [#6159](https://github.com/angular-ui/bootstrap/issues/6159) [#6105](https://github.com/angular-ui/bootstrap/issues/6105) [#6146](https://github.com/angular-ui/bootstrap/issues/6146) [#6147](https://github.com/angular-ui/bootstrap/issues/6147)
+* **dropdown:** fix keyboard-nav ([6bad759](https://github.com/angular-ui/bootstrap/commit/6bad759)), closes [#6102](https://github.com/angular-ui/bootstrap/issues/6102) [#6154](https://github.com/angular-ui/bootstrap/issues/6154)
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/angular-ui/bootstrap/compare/2.0.0...v2.0.1) (2016-08-02)
 

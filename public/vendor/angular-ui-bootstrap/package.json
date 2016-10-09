@@ -2,49 +2,51 @@
   "_args": [
     [
       {
-        "name": "angular-ui-bootstrap",
-        "raw": "angular-ui-bootstrap",
-        "rawSpec": "",
+        "raw": "angular-ui-bootstrap@^2.0.1",
         "scope": null,
-        "spec": "latest",
-        "type": "tag"
+        "escapedName": "angular-ui-bootstrap",
+        "name": "angular-ui-bootstrap",
+        "rawSpec": "^2.0.1",
+        "spec": ">=2.0.1 <3.0.0",
+        "type": "range"
       },
-      "/Users/brianqanderson/bella-luna"
+      "/Users/briananderson/bella-luna/bella-luna"
     ]
   ],
-  "_from": "angular-ui-bootstrap@latest",
-  "_id": "angular-ui-bootstrap@2.0.1",
+  "_from": "angular-ui-bootstrap@>=2.0.1 <3.0.0",
+  "_id": "angular-ui-bootstrap@2.1.3",
   "_inCache": true,
   "_installable": true,
   "_location": "/angular-ui-bootstrap",
-  "_nodeVersion": "6.0.0",
+  "_nodeVersion": "4.5.0",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/angular-ui-bootstrap-2.0.1.tgz_1470119589225_0.4005437456071377"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-ui-bootstrap-2.1.3.tgz_1472139507081_0.9455371140502393"
   },
   "_npmUser": {
-    "email": "wesley.cho@gmail.com",
-    "name": "wesleycho"
+    "name": "wesleycho",
+    "email": "wesley.cho@gmail.com"
   },
-  "_npmVersion": "3.8.6",
+  "_npmVersion": "3.10.6",
   "_phantomChildren": {},
   "_requested": {
-    "name": "angular-ui-bootstrap",
-    "raw": "angular-ui-bootstrap",
-    "rawSpec": "",
+    "raw": "angular-ui-bootstrap@^2.0.1",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": "angular-ui-bootstrap",
+    "name": "angular-ui-bootstrap",
+    "rawSpec": "^2.0.1",
+    "spec": ">=2.0.1 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/",
     "/angular-bootstrap-calendar"
   ],
-  "_resolved": "https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.0.1.tgz",
-  "_shasum": "0ee9008ec7825932950e5dbd4db8169dba198cb6",
+  "_resolved": "https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz",
+  "_shasum": "832f65cd43a4f48adb3c0b2b5fe74a6801d97010",
   "_shrinkwrap": null,
-  "_spec": "angular-ui-bootstrap",
-  "_where": "/Users/brianqanderson/bella-luna",
+  "_spec": "angular-ui-bootstrap@^2.0.1",
+  "_where": "/Users/briananderson/bella-luna/bella-luna",
   "author": {
     "name": "https://github.com/angular-ui/bootstrap/graphs/contributors"
   },
@@ -54,9 +56,9 @@
   "dependencies": {},
   "description": "[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular-ui/bootstrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://secure.travis-ci.org/angular-ui/bootstrap.svg)](http://travis-",
   "devDependencies": {
-    "angular": "1.5.5",
-    "angular-mocks": "1.5.5",
-    "angular-sanitize": "1.5.5",
+    "angular": "1.5.8",
+    "angular-mocks": "1.5.8",
+    "angular-sanitize": "1.5.8",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -83,8 +85,8 @@
     "lib": "src/"
   },
   "dist": {
-    "shasum": "0ee9008ec7825932950e5dbd4db8169dba198cb6",
-    "tarball": "https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.0.1.tgz"
+    "shasum": "832f65cd43a4f48adb3c0b2b5fe74a6801d97010",
+    "tarball": "https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz"
   },
   "files": [
     "index.js",
@@ -92,18 +94,18 @@
     "src/",
     "template/"
   ],
-  "gitHead": "e8e4ef1070423836eb5d7c1a8a4a2e2888f37f92",
+  "gitHead": "294b151342a1b311999c947ec337f8d6026a92f4",
   "homepage": "http://angular-ui.github.io/bootstrap/",
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
-      "email": "Foxandxss@gmail.com",
-      "name": "foxandxss"
+      "name": "foxandxss",
+      "email": "Foxandxss@gmail.com"
     },
     {
-      "email": "wesley.cho@gmail.com",
-      "name": "wesleycho"
+      "name": "wesleycho",
+      "email": "wesley.cho@gmail.com"
     }
   ],
   "name": "angular-ui-bootstrap",
@@ -116,5 +118,5 @@
   "scripts": {
     "test": "grunt"
   },
-  "version": "2.0.1"
+  "version": "2.1.3"
 }

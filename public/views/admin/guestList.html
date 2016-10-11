@@ -41,16 +41,16 @@
             </td>
           </tr>
           <tr ng-show="glc.guests[$index].clicked">
-            <td class="col-sm-6">
+            <td class="col-sm-3">
               <input type="text" class="form-control input-sm" placeholder="Update First Name" ng-model="glc.updateFirstName" />
             </td>
-            <td class="col-sm-6">
+            <td class="col-sm-3">
               <input type="text" class="form-control input-sm" placeholder="Update Last Name" ng-model="glc.updateLastName" />
             </td>
-            <td class="col-sm-9">
+            <td class="col-sm-5">
               <input type="email" class="form-control input-sm" placeholder="Update Email" ng-model="glc.updateEmail" />
             </td>
-            <td class="col-sm-3 center">
+            <td class="col-sm-1 center">
               <span class="glyphicon glyphicon-ok text-success" ng-click="glc.updateGuests($index)"></span>
               <span class="glyphicon glyphicon-remove text-danger" ng-click="glc.deleteGuest($index)"></span>
             </td>
@@ -59,16 +59,16 @@
       </table>
 
       <form class="form-inline">
-        <div class="form-group guest-list">
+        <div class="form-group guest-list col-sm-6">
           <input type="text" class="form-control" placeholder="First Name" ng-model="glc.firstName" />
         </div>
-        <div class="form-group guest-list">
+        <div class="form-group guest-list col-sm-6">
           <input type="text" class="form-control" placeholder="Last Name" ng-model="glc.lastName" />
         </div>
-        <div class="form-group guest-list`">
+        <div class="form-group guest-list col-sm-9">
           <input type="email" class="form-control" placeholder="Email Address" ng-model="glc.email" />
         </div>
-        <div class="form-group">
+        <div class="form-group col-sm-3">
           <button class="btn btn-main" ng-click="glc.addGuest(showGuest())">Add Guest</button>
         </div>
       </form>

@@ -10,7 +10,7 @@
 </nav>
 
 <!-- Main Email Page Body -->
-<div class="container">
+<!-- <div class="container"> -->
 
   <!-- Guest Email List -->
   <div class="col-sm-7">
@@ -59,16 +59,16 @@
       </table>
 
       <form class="form-inline">
-        <div class="form-group guest-list col-sm-6">
+        <div class="form-group guest-list">
           <input type="text" class="form-control" placeholder="First Name" ng-model="glc.firstName" />
         </div>
-        <div class="form-group guest-list col-sm-6">
+        <div class="form-group guest-list">
           <input type="text" class="form-control" placeholder="Last Name" ng-model="glc.lastName" />
         </div>
-        <div class="form-group guest-list col-sm-9">
+        <div class="form-group guest-list">
           <input type="email" class="form-control" placeholder="Email Address" ng-model="glc.email" />
         </div>
-        <div class="form-group col-sm-3">
+        <div class="form-group">
           <button class="btn btn-main" ng-click="glc.addGuest(showGuest())">Add Guest</button>
         </div>
       </form>
@@ -95,4 +95,4 @@
     </div>
   </div>
 
-</div>
+<!-- </div> -->

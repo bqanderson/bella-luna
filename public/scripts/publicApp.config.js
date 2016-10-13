@@ -4,9 +4,7 @@ angular.module('publicApp').config(function($routeProvider, $locationProvider){
   $routeProvider
 
   .when('/', {
-    templateUrl: 'views/events.html',
-    controller: 'PublicEventsController',
-    controllerAs: 'pec'
+    templateUrl: 'views/slider.html'
   })
   .when('/about', {
     templateUrl: 'views/about.html'

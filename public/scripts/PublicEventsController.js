@@ -1,6 +1,8 @@
 angular.module('publicApp').controller('PublicEventsController', function($http, moment, alert, calendarConfig, PubDataService){
   var vm = this;
-  vm.events = PubDataService.data;
+  vm.allEvents = PubDataService.allEvents;
+  vm.upcomingEvents = PubDataService.newEvents;
+  vm.pastEvents = PubDataService.pastEvents;
 
   //Angular-Calendar
   vm.calendarView = 'month';

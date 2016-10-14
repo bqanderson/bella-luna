@@ -47,7 +47,7 @@
   <br>
 
   <mwl-calendar
-    events="pec.events.events"
+    events="pec.allEvents.events"
     view="pec.calendarView"
     view-title="pec.calendarTitle"
     view-date="pec.viewDate"
@@ -58,7 +58,12 @@
     day-view-end="22:59"
     day-view-split="30"
     cell-modifier="pec.modifyCell(calendarCell)">
-  </mwl-calendar>
+  </mwl-calendar><br />
+
+  <div class="center">
+    <button type="button" class="btn btn-main" ng-click="pec.suggestEvent()">Suggest Event</button>
+    <button type="button" class="btn btn-alt" ng-click="pec.requestAIR()">Request Artist in Residency</button>
+  </div>
 </div>
 
 <!-- upcoming events view -->
@@ -73,17 +78,33 @@
             <th class="robotoBold col-sm-8">Event Name</th>
           </tr>
         </thead>
-        <tbody ng-repeat="event in pec.events.events | orderBy : 'startsAt' track by $index">
-          <tr ng-click="pec.viewEventClicked(event)">
-            <td><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
-            <td><p class="table-info">{{event.title}}</p></td>
+        <tbody ng-repeat="currentEvent in pec.upcomingEvents.currentEvents | orderBy : 'startsAt' track by $index">
+          <tr ng-click="pec.viewEventClicked(currentEvent)">
+            <td><p class="table-info">{{currentEvent.startsAt | date: 'short'}}</p></td>
+            <td><p class="table-info">{{currentEvent.title}}</p></td>
           </tr>
         </tbody>
       </table>
     </li>
   </ul>
-  <div class="center">
-    <button type="button" class="btn btn-main" ng-click="pec.suggestEvent()">Suggest Event</button>
-    <button type="button" class="btn btn-alt" ng-click="pec.requestAIR()">Request Artist in Residency</button>
-  </div>
+
+  <h2 class="text-center oldStandard">Past Events</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <table class="table table-hover robotoLite">
+        <thead>
+          <tr>
+            <th class="robotoBold col-sm-4">Date and Time</th>
+            <th class="robotoBold col-sm-8">Event Name</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="pastEvent in pec.pastEvents.pastEvents | orderBy : 'startsAt' track by $index">
+          <tr ng-click="pec.viewEventClicked(pastEvent)">
+            <td><p class="table-info">{{pastEvent.startsAt | date: 'short'}}</p></td>
+            <td><p class="table-info">{{pastEvent.title}}</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
 </div>

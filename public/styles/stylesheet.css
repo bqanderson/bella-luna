@@ -250,6 +250,10 @@ p {
   color: #999;
 }
 
+p.modal-text {
+  font-size: 14px;
+}
+
 ul.navList {
   margin-bottom: 0;
 }

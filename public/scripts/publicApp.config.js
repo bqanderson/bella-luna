@@ -14,8 +14,10 @@ angular.module('publicApp').config(function($routeProvider, $locationProvider){
     controller: 'PublicEventsController',
     controllerAs: 'pec'
   })
-  .when('/artists', {
-    templateUrl: 'views/artists.html'
+  .when('/calendar', {
+    templateUrl: 'views/calendar.html',
+    controller: 'PublicEventsController',
+    controllerAs: 'pec'
   })
   .when('/press', {
     templateUrl: 'views/press.html'

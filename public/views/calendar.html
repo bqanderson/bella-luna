@@ -1,0 +1,110 @@
+<!-- calendar view -->
+<div class="col-sm-7">
+  <h2 class="text-center oldStandard"> {{ pec.calendarTitle }} </h2>
+
+  <div class="row">
+
+    <div class="col-sm-3 text-center">
+      <div class="btn-group btn-group-xs">
+
+        <button
+          class="btn btn-main robotoLite"
+          mwl-date-modifier
+          date="pec.viewDate"
+          decrement="pec.calendarView">
+          Previous
+        </button>
+        <button
+          class="btn btn-alt robotoLite"
+          mwl-date-modifier
+          date="pec.viewDate"
+          set-to-today>
+          Today
+        </button>
+        <button
+          class="btn btn-main robotoLite"
+          mwl-date-modifier
+          date="pec.viewDate"
+          increment="pec.calendarView">
+          Next
+        </button>
+      </div>
+    </div>
+
+    <br class="visible-xs visible-sm">
+
+    <div class="col-sm-4 text-center pull-right">
+      <div class="btn-group  btn-group-xs">
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'year'">Year</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'month'">Month</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'week'">Week</label>
+        <label class="btn btn-main robotoLite" ng-model="pec.calendarView" uib-btn-radio="'day'">Day</label>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <mwl-calendar
+    events="pec.allEvents.events"
+    view="pec.calendarView"
+    view-title="pec.calendarTitle"
+    view-date="pec.viewDate"
+    on-event-click="pec.viewEventClicked(calendarEvent)"
+    on-event-times-changed="pec.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+    cell-is-open="pec.isCellOpen"
+    day-view-start="06:00"
+    day-view-end="22:59"
+    day-view-split="30"
+    cell-modifier="pec.modifyCell(calendarCell)">
+  </mwl-calendar><br />
+
+  <div class="center">
+    <button type="button" class="btn btn-main" ng-click="pec.suggestEvent()">Suggest Event</button>
+    <button type="button" class="btn btn-alt" ng-click="pec.requestAIR()">Request Artist in Residency</button>
+  </div>
+</div>
+
+<!-- upcoming events view -->
+<div class="col-sm-5">
+  <h2 class="text-center oldStandard">Upcoming Events</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <table class="table table-hover robotoLite">
+        <thead>
+          <tr>
+            <th class="robotoBold col-sm-4">Date and Time</th>
+            <th class="robotoBold col-sm-8">Event Name</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="currentEvent in pec.upcomingEvents.currentEvents | orderBy : 'startsAt' track by $index">
+          <tr ng-click="pec.viewEventClicked(currentEvent)">
+            <td><p class="table-info">{{currentEvent.startsAt | date: 'short'}}</p></td>
+            <td><p class="table-info">{{currentEvent.title}}</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+
+  <h2 class="text-center oldStandard">Past Events</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <table class="table table-hover robotoLite">
+        <thead>
+          <tr>
+            <th class="robotoBold col-sm-4">Date and Time</th>
+            <th class="robotoBold col-sm-8">Event Name</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="pastEvent in pec.pastEvents.pastEvents | orderBy : 'startsAt' track by $index">
+          <tr ng-click="pec.viewEventClicked(pastEvent)">
+            <td><p class="table-info">{{pastEvent.startsAt | date: 'short'}}</p></td>
+            <td><p class="table-info">{{pastEvent.title}}</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</div>

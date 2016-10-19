@@ -246,12 +246,12 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
   color: #999;
 }
 
 p.modal-text {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 ul.navList {
@@ -400,13 +400,8 @@ option.placeholder {
 }
 
 /*---------------------------------------------------------
-Testing Layout
+Calendar Layout
 ---------------------------------------------------------*/
-
-.lightgreen {
-  background-color: lightgreen;
-}
-
-.lightblue {
-  background-color: lightblue;
+#cal-week-box {
+  display: none;
 }

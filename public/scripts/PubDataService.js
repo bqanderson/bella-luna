@@ -4,13 +4,18 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
   var allEvents = {};
   var newEvents = {};
   var pastEvents = {};
-  var newEventsObject = [];
-  var pastEventsObject = [];
+  var newEventArray = [];
+  var pastEventArray = [];
+  var noEvent = {
+    title: 'Please Check Back Soon',
+    description: 'We are currently looking for new and exciting events to host. Please continue to check back frequently.'
+  }
 
   // List all events
   function showEvents(){
     $http.get('/showEvents').then(function(res){
-      console.log('Events:', res.data);
+      newEventArray = [];
+      pastEventArray = [];
 
       for (var i = 0; i < res.data.length; i++) {
 
@@ -39,23 +44,20 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
         var eventDate = new Date(res.data[i].startsAt)
 
         if (eventDate.withoutTime() >= new Date().withoutTime()) {
-          newEventsObject.push(res.data[i])
-        }else {
-          pastEventsObject.push(res.data[i])
+          newEventArray.push(res.data[i])
+        } else {
+          pastEventArray.push(res.data[i])
         }
-
       }
 
-      console.log('Upcoming Events:', newEventsObject);
-      console.log('Past Events:', pastEventsObject);
-      console.log('All Events:', res.data);
+
+      if (newEventArray.length === 0) {
+        newEventArray.push(noEvent)
+      }
 
       allEvents.events = res.data
-      newEvents.currentEvents = newEventsObject;
-      pastEvents.pastEvents = pastEventsObject;
-
-      console.log('New Events:', newEvents);
-      console.log('All Events:', allEvents);
+      newEvents.currentEvents = newEventArray;
+      pastEvents.pastEvents = pastEventArray;
 
     }, function(res){
       console.log('Fail', res);

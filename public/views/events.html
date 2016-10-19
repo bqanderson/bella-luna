@@ -2,9 +2,6 @@
 <div class="csite-inner">
   <div class="content-sidebar-wrap">
     <main class="content">
-      <header class="entry-header">
-        <h1 class="entry-title" itemprop="headline">Events</h1>
-      </header>
       <p>
         <img class='alignright size-full wp-image-54'
           src='http://wolfhousempls.com/wp-content/uploads/2015/08/howl-small.jpg'
@@ -13,6 +10,7 @@
         />
       </p>
 
+      <h3>Past Events</h3>
       <div ng-repeat="currentEvent in pec.upcomingEvents.currentEvents | orderBy : 'startsAt' track by $index">
         <p>
           <strong>{{currentEvent.title}}</strong><br />

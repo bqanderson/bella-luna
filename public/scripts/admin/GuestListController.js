@@ -21,7 +21,6 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
     sendData.emailTo = false;
 
     $http.post('/addGuest', sendData).then(function(){
-      console.log('Guest Added', sendData);
     }, function(){
       console.log('Fail');
     })
@@ -77,8 +76,6 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
       sendData.email = vm.updateEmail;
 
     $http.put('/editGuest/' + id, sendData).then(function(res){
-      console.log(res);
-      console.log('Edit Guest', id);
       vm.showGuest();
       vm.updateFirstName = null;
       vm.updateLastName = null;
@@ -105,8 +102,6 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
     sendData.subject = vm.emailSubject;
     sendData.message = vm.emailMessage;
     sendData.link = vm.eventLink;
-
-    console.log('Email Info:', sendData);
 
     $http.post('/sendEmail', sendData).then(function(res){
       console.log(res);

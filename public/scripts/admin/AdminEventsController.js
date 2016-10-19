@@ -8,7 +8,6 @@ angular.module('adminApp').controller('AdminEventsController', function($http, m
 
   // Toggle Calendar Event code:
   vm.toggle = function($event, field, event) {
-    console.log('Clicked toggle');
     $event.preventDefault();
     $event.stopPropagation();
     event[field] = !event[field];
@@ -26,9 +25,7 @@ angular.module('adminApp').controller('AdminEventsController', function($http, m
 
   // Delete Admin Event
   vm.deleteEvent = function(adminEventId) {
-    console.log("Delete Event", adminEventId);
     $http.delete('/deleteAdminEvent/' + adminEventId).then(function(res){
-      console.log(res);
       vm.events.events = res.data;
       DataService.showEvents();
     }, function(res){

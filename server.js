@@ -4,8 +4,6 @@ var bodyParser  = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local').Strategy
-// var moment = require('moment'); //not sure if I need this here or not
-// var angularMoment = require('angular-moment');
 
 require('dotenv').config();
 
@@ -13,6 +11,8 @@ var User = require('./models/user');
 
 var index = require('./routes/index');
 var adminRouter = require('./routes/admin');
+var eventsRouter = require('./routes/events');
+var calendarRouter = require('./routes/calendar');
 var register = require('./routes/register');
 var login = require('./routes/login');
 var createAdminEvent = require('./routes/createAdminEvent');
@@ -65,6 +65,8 @@ passport.use('local', new localStrategy({ passReqToCallback: true, usernameField
 
 // routes
 app.use('/', index);
+app.use('/events', eventsRouter);
+app.use('/calendar', calendarRouter);
 app.use('/admin', adminRouter);
 app.use('/register', register);
 app.use('/login', login);
@@ -77,10 +79,6 @@ app.use('/showGuest', showGuest);
 app.use('/deleteGuest', deleteGuest);
 app.use('/editGuest', editGuest);
 app.use('/sendEmail', sendEmail);
-
-// app.get('/*', function(req, res, next){
-//   res.sendFile(path.resolve(__dirname, 'public/views/admin.html'));
-// });
 
 var mLabUser = process.env.mLabUser;
 var mLabPass = process.env.mLabPass;

@@ -8,4 +8,5 @@ angular.module('publicApp').controller('ViewEventModalController', function($htt
   vm.endsAt = sendData.endsAt;
   vm.description = sendData.description;
   vm.tixLink = sendData.tixLink;
+  vm.fbLink = sendData.fbLink;
 })

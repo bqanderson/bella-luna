@@ -11,6 +11,7 @@ var adminEventSchema = new Schema({
   resizable: Boolean,
   description: String,
   tixLink:  String,
+  fbLink: String,
   pubToBella: Boolean,
   pubToFacebook: Boolean,
   pubToAnnette: Boolean

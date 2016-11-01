@@ -91,6 +91,7 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
     sendData.endsAt = vm.endsAt;
     sendData.description = vm.description;
     sendData.tixLink = vm.tixLink;
+    sendData.fbLink = vm.fbLink;
     sendData.pubToBella = vm.pubToBella;
     sendData.pubToFacebook = vm.pubToFacebook;
     sendData.pubToAnnette = vm.pubToAnnette;

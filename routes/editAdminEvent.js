@@ -17,6 +17,7 @@ router.put('/:id', function(req, res){
       var endsAt = data.endsAt;
       var description = data.description;
       var tixLink = data.tixLink;
+      var fbLink = data.fbLink;
       var pubToBella = data.pubToBella;
       var pubToFacebook = data.pubToFacebook;
       var pubToAnnette = data.pubToAnnette;
@@ -37,6 +38,9 @@ router.put('/:id', function(req, res){
       }
       if(tixLink){
         events.tixLink = tixLink;
+      }
+      if (fbLink){
+        events.fbLink = fbLink;
       }
       if(pubToBella){
         events.pubToBella = pubToBella;

@@ -5,9 +5,12 @@
     </div>
     <div class="panel-body">
       <p class="robotoBold modal-text">{{vemc.startsAt | date: 'short'}}</p>
-      <p class="modal-text">{{vemc.description}} what is going on?</p>
+      <p class="modal-text">{{vemc.description}}</p>
       <p class="modal-text">
         Tickets Available at: <a href="{{vemc.tixLink}}" ng-click="$close()">{{vemc.tixLink}}</a>
+      </p>
+      <p class="modal-text">
+        See our <a href="{{vemc.fbLink}}" ng-click="$close()">Facebook Page</a> for more info.
       </p>
     </div>
   </div>

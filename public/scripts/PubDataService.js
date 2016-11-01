@@ -14,39 +14,41 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
   // List all events
   function showEvents(){
     $http.get('/showEvents').then(function(res){
+      console.log('Res Data:', res.data);
       newEventArray = [];
       pastEventArray = [];
 
       for (var i = 0; i < res.data.length; i++) {
+        if (res.data[i].pubToBella) {
+          // add color config to each event
+          switch (res.data[i].eventType) {
+            case 'public':
+              res.data[i].color = calendarConfig.colorTypes.public;
+            break;
+            case 'private':
+              res.data[i].color = calendarConfig.colorTypes.private;
+            break;
+            case 'artInRes':
+              res.data[i].color = calendarConfig.colorTypes.artInRes;
+            break;
+          }
 
-        // add color config to each event
-        switch (res.data[i].eventType) {
-          case 'public':
-            res.data[i].color = calendarConfig.colorTypes.public;
-          break;
-          case 'private':
-            res.data[i].color = calendarConfig.colorTypes.private;
-          break;
-          case 'artInRes':
-            res.data[i].color = calendarConfig.colorTypes.artInRes;
-          break;
-        }
+          // seperate events into past or upcoming
 
-        // seperate events into past or upcoming
+          // Creating function to compare start date to current date
+          Date.prototype.withoutTime = function () {
+            var d = new Date(this);
+            d.setHours(0, 0, 0, 0, 0);
+            return d
+          };
 
-        // Creating function to compare start date to current date
-        Date.prototype.withoutTime = function () {
-          var d = new Date(this);
-          d.setHours(0, 0, 0, 0, 0);
-          return d
-        };
+          var eventDate = new Date(res.data[i].startsAt)
 
-        var eventDate = new Date(res.data[i].startsAt)
-
-        if (eventDate.withoutTime() >= new Date().withoutTime()) {
-          newEventArray.push(res.data[i])
-        } else {
-          pastEventArray.push(res.data[i])
+          if (eventDate.withoutTime() >= new Date().withoutTime()) {
+            newEventArray.push(res.data[i])
+          } else {
+            pastEventArray.push(res.data[i])
+          }
         }
       }
 

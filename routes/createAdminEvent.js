@@ -15,6 +15,7 @@ router.post('/', function(req, res){
     resizable: data.resizable,
     description: data.description,
     tixLink: data.tixLink,
+    fbLink: data.fbLink,
     pubToBella: data.pubToBella,
     pubToFacebook: data.pubToFacebook,
     pubToAnnette: data.pubToAnnette,

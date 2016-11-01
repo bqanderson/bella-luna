@@ -13,6 +13,7 @@ var index = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var eventsRouter = require('./routes/events');
 var calendarRouter = require('./routes/calendar');
+var galleryRouter = require('./routes/gallery');
 var register = require('./routes/register');
 var login = require('./routes/login');
 var createAdminEvent = require('./routes/createAdminEvent');
@@ -67,6 +68,7 @@ passport.use('local', new localStrategy({ passReqToCallback: true, usernameField
 app.use('/', index);
 app.use('/events', eventsRouter);
 app.use('/calendar', calendarRouter);
+app.use('/gallery', galleryRouter);
 app.use('/admin', adminRouter);
 app.use('/register', register);
 app.use('/login', login);

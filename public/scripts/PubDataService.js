@@ -19,22 +19,23 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
       pastEventArray = [];
 
       for (var i = 0; i < res.data.length; i++) {
+        // add color config to each event
+        switch (res.data[i].eventType) {
+          case 'public':
+            res.data[i].color = calendarConfig.colorTypes.public;
+          break;
+          case 'private':
+            res.data[i].color = calendarConfig.colorTypes.private;
+            res.data[i].title = 'Private Event'
+          break;
+          case 'artInRes':
+            res.data[i].color = calendarConfig.colorTypes.artInRes;
+            res.data[i].title = 'Artist in Residency'
+          break;
+        }
+
+        // seperate events into past or upcoming
         if (res.data[i].pubToBella) {
-          // add color config to each event
-          switch (res.data[i].eventType) {
-            case 'public':
-              res.data[i].color = calendarConfig.colorTypes.public;
-            break;
-            case 'private':
-              res.data[i].color = calendarConfig.colorTypes.private;
-            break;
-            case 'artInRes':
-              res.data[i].color = calendarConfig.colorTypes.artInRes;
-            break;
-          }
-
-          // seperate events into past or upcoming
-
           // Creating function to compare start date to current date
           Date.prototype.withoutTime = function () {
             var d = new Date(this);

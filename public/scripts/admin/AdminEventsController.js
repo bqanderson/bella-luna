@@ -1,6 +1,9 @@
 angular.module('adminApp').controller('AdminEventsController', function($http, moment, alert, calendarConfig, DataService){
   var vm = this;
-  vm.events = DataService.events;
+  vm.allEvents = DataService.allEvents;
+  vm.publicEvents = DataService.publicEvents;
+  vm.privateEvents = DataService.privateEvents;
+  vm.airEvents = DataService.airEvents;
 
   //Angular-Calendar code:
   vm.calendarView = 'month';

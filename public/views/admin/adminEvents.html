@@ -56,7 +56,7 @@
   <br>
 
   <mwl-calendar
-    events="aec.events.events"
+    events="aec.allEvents.events"
     view="aec.calendarView"
     view-title="aec.calendarTitle"
     view-date="aec.viewDate"
@@ -70,9 +70,10 @@
   </mwl-calendar>
 </div>
 
-<!-- upcoming events view -->
 <div class="col-sm-5">
-  <h2 class="text-center oldStandard">Upcoming Events</h2>
+
+  <!-- public events view -->
+  <h2 class="text-center oldStandard">Public Events</h2>
   <ul class="list-group">
     <li class="list-group-item">
       <table class="table table-hover">
@@ -83,7 +84,7 @@
             <th class="col-sm-2">Remove</th>
           </tr>
         </thead>
-        <tbody ng-repeat="event in aec.events.events | orderBy : 'startsAt' track by $index">
+        <tbody ng-repeat="event in aec.publicEvents.events | orderBy : 'startsAt' track by $index">
           <tr>
             <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
             <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.title}}</p></td>
@@ -95,5 +96,57 @@
       </table>
     </li>
   </ul>
+
+  <!-- private events view -->
+  <h2 class="text-center oldStandard">Private Events</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="col-sm-4">Date and Time</th>
+            <th class="col-sm-6">Event Name</th>
+            <th class="col-sm-2">Remove</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="event in aec.privateEvents.events | orderBy : 'startsAt' track by $index">
+          <tr>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.title}}</p></td>
+            <td class="center">
+              <span class="glyphicon glyphicon-remove text-danger" ng-click="aec.deleteEvent(event._id)"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+
+  <!-- artist in residency view -->
+  <h2 class="text-center oldStandard">Artist in Residency</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="col-sm-4">Date and Time</th>
+            <th class="col-sm-6">Event Name</th>
+            <th class="col-sm-2">Remove</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="event in aec.airEvents.events | orderBy : 'startsAt' track by $index">
+          <tr>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.startsAt | date: 'short'}}</p></td>
+            <td ng-click="aec.editEventClicked(event)"><p class="table-info">{{event.title}}</p></td>
+            <td class="center">
+              <span class="glyphicon glyphicon-remove text-danger" ng-click="aec.deleteEvent(event._id)"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+
+
   <button type="button" class="btn btn-main col-sm-6 col-sm-offset-3" ng-click="aec.addEventClicked()">Add Event</button>
 </div>

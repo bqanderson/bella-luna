@@ -1,7 +1,6 @@
 angular.module('publicApp').factory('alert', function($uibModal, $http){
 
   function showEvent(modalData){
-    console.log('Modal Data:', modalData.eventType);
     var tempUrl;
 
     switch (modalData.eventType) {

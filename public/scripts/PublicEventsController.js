@@ -10,7 +10,6 @@ angular.module('publicApp').controller('PublicEventsController', function($http,
 
   // Toggle Calendar Event
   vm.toggle = function($event, field, event) {
-    console.log('Clicked toggle');
     $event.preventDefault();
     $event.stopPropagation();
     event[field] = !event[field];

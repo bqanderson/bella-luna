@@ -32,12 +32,10 @@ angular.module('adminApp').controller('AddEventsModalController', function($http
   vm.toggleMin();
 
   vm.open1 = function() {
-    console.log('Clicke open1');
     vm.popup1.opened = true;
   };
 
   vm.open2 = function() {
-    console.log('Clicked open2');
     vm.popup2.opened = true;
   };
 

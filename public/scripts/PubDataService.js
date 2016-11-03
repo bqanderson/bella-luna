@@ -14,7 +14,6 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
   // List all events
   function showEvents(){
     $http.get('/showEvents').then(function(res){
-      console.log('Res Data:', res.data);
       newEventArray = [];
       pastEventArray = [];
 

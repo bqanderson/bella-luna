@@ -29,7 +29,6 @@ angular.module('adminApp').controller('AdminEventsController', function($http, m
   // Delete Admin Event
   vm.deleteEvent = function(adminEventId) {
     $http.delete('/deleteAdminEvent/' + adminEventId).then(function(res){
-      vm.events.events = res.data;
       DataService.showEvents();
     }, function(res){
       console.log('Fail', res);

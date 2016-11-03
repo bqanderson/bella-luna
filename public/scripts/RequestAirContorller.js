@@ -32,12 +32,10 @@ angular.module('publicApp').controller('RequestAirController', function function
   vm.toggleMin();
 
   vm.open1 = function() {
-    console.log('Clicke open1');
     vm.popup1.opened = true;
   };
 
   vm.open2 = function() {
-    console.log('Clicked open2');
     vm.popup2.opened = true;
   };
 
@@ -46,8 +44,6 @@ angular.module('publicApp').controller('RequestAirController', function function
   };
 
   vm.formats = ['shortDate'];
-  // vm.format = vm.formats[0];
-  // vm.altInputFormats = ['M!/d!/yyyy'];
 
   vm.popup1 = {
     opened: false

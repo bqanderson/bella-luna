@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser  = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
-var localStrategy = require('passport-local').Strategy
+var localStrategy = require('passport-local').Strategy;
 
 require('dotenv').config();
 
@@ -19,7 +19,7 @@ var login = require('./routes/login');
 var createAdminEvent = require('./routes/createAdminEvent');
 var showEvents = require('./routes/showEvents');
 var deleteEvents = require('./routes/deleteAdminEvent');
-var editEvent = require('./routes/editAdminEvent')
+var editEvent = require('./routes/editAdminEvent');
 var addGuest = require('./routes/addGuest');
 var showGuest = require('./routes/showGuest');
 var deleteGuest = require('./routes/deleteGuest');
@@ -45,7 +45,7 @@ passport.use('local', new localStrategy({ passReqToCallback: true, usernameField
     User.findOne({ username: username }, function(err, user){
       if (err) {
         throw err
-      };
+      }
       if (!user) {
         return done(null, false, {message: 'Incorrect username and password.'});
       }
@@ -104,4 +104,4 @@ var server = app.listen(process.env.PORT || 3100, function(){
   var port = server.address().port;
   console.log("Listening on port", port);
   console.log('MongoDB Connected');
-})
+});

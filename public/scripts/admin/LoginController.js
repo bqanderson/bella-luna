@@ -9,7 +9,6 @@ angular.module('adminApp').controller('LoginController', function($http, $locati
     sendData.password = vm.password;
 
     $http.post('/register', sendData).then(function(res){
-      console.log('Registation successful');
     }, function(err){
       console.log(err);
     });
@@ -23,7 +22,6 @@ angular.module('adminApp').controller('LoginController', function($http, $locati
 
     $http.post('/login', sendData).then(function(res){
       $location.path('/admin/adminEvents');
-      console.log('Login successful');
     }, function(err){
       console.log(err);
 

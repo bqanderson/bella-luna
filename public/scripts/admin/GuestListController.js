@@ -12,7 +12,6 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
 
   // Add Guest code
   vm.addGuest = function(){
-    console.log('Add Guest Clicked');
     var sendData = {};
 
     sendData.firstName = vm.firstName,
@@ -34,8 +33,6 @@ angular.module('adminApp').controller('GuestListController', function($http, Dat
 
   vm.deleteGuest = function(index){
     var id = vm.guests[index]._id;
-
-    console.log('Delete Guest', id);
     $http.delete('/deleteGuest/' + id).then(function(res){
       console.log(res);
       vm.guests = res.data;

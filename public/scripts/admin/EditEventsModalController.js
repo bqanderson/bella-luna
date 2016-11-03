@@ -119,8 +119,6 @@ angular.module('adminApp').controller('EditedEventsModalController', function($h
     sendData.pubToAnnette = vm.pubToAnnette;
 
     DataService.updateAdminEvent(sendData)
-    console.log('Edited Data:', sendData);
-
   }
 
 })

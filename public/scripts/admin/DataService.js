@@ -46,11 +46,9 @@ angular.module('adminApp').factory('DataService', function($http, calendarConfig
             res.data[i].color = calendarConfig.colorTypes.artInRes;
           break;
         }
-        console.log('Test:');
 
         if (res.data[i].eventType === 'public') {
           publicEventsArray.push(res.data[i])
-          console.log('PE Array', publicEventsArray);
         } else if (res.data[i].eventType === 'private') {
           privateEventsArray.push(res.data[i])
         } else if (res.data[i].eventType === 'artInRes') {

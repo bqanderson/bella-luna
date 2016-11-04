@@ -1,5 +1,6 @@
 angular.module('publicApp')
   .config(function(calendarConfig) {
+    console.log(calendarConfig);
     calendarConfig.dateFormatter = 'moment'; // use moment to format dates
     moment.locale('en_US');
     calendarConfig.displayAllMonthEvents = true;
@@ -19,4 +20,8 @@ angular.module('publicApp')
         secondary: '#fdf1ba'
       }
     };
+
+    calendarConfig.dateFormats = {
+      datetime: 'MMM D'
+    }
   });

@@ -4,6 +4,7 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
   var allEvents = {};
   var newEvents = {};
   var pastEvents = {};
+  var allEventsArray = [];
   var newEventArray = [];
   var pastEventArray = [];
   var noEvent = {
@@ -16,26 +17,28 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
     $http.get('/showEvents').then(function(res){
       newEventArray = [];
       pastEventArray = [];
+      allEventsArray = [];
 
       for (var i = 0; i < res.data.length; i++) {
-        // add color config to each event
-        switch (res.data[i].eventType) {
-          case 'public':
-            res.data[i].color = calendarConfig.colorTypes.public;
-          break;
-          case 'private':
-            res.data[i].color = calendarConfig.colorTypes.private;
-            res.data[i].title = 'Private Event'
-          break;
-          case 'artInRes':
-            res.data[i].color = calendarConfig.colorTypes.artInRes;
-            res.data[i].title = 'Artist in Residency'
-          break;
-        }
-
-        // seperate events into past or upcoming
         if (res.data[i].pubToBella) {
-          // Creating function to compare start date to current date
+          // add color config to each event
+          switch (res.data[i].eventType) {
+            case 'public':
+              res.data[i].color = calendarConfig.colorTypes.public;
+            break;
+            case 'private':
+              res.data[i].color = calendarConfig.colorTypes.private;
+              res.data[i].title = 'Private Event'
+            break;
+            case 'artInRes':
+              res.data[i].color = calendarConfig.colorTypes.artInRes;
+              res.data[i].title = 'Artist in Residency'
+            break;
+          }
+
+          allEventsArray.push(res.data[i]);
+
+          // seperate events into past or upcoming
           Date.prototype.withoutTime = function () {
             var d = new Date(this);
             d.setHours(0, 0, 0, 0, 0);
@@ -57,7 +60,7 @@ angular.module('publicApp').factory('PubDataService', function($http, calendarCo
         newEventArray.push(noEvent)
       }
 
-      allEvents.events = res.data
+      allEvents.events = allEventsArray;
       newEvents.currentEvents = newEventArray;
       pastEvents.pastEvents = pastEventArray;
 

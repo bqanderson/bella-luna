@@ -10,7 +10,9 @@ router.post('/', function(req, res){
   console.log('Data sent:', data);
 
   var transporter = nodemailer.createTransport(smtpTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.username,
       pass: process.env.password
